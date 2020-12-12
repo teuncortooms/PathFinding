@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Node from "./Node/Node.jsx";
-import { dijkstra } from "../../algorithms/dijkstra.js";
+import { dijkstra, getPath } from "../../algorithms/dijkstra.js";
 
 import "./PathFindingVisualiser.css";
 
@@ -20,6 +20,7 @@ export class PathFindingVisualiser extends Component {
         super(props);
         this.state = {
             grid: [],
+            mouseIsPressed: false
         };
     }
 
@@ -28,35 +29,12 @@ export class PathFindingVisualiser extends Component {
         this.setState({ grid });
     }
 
-    animateDijkstra(visitedNodesInOrder) {
-        for (let i = 0; i < visitedNodesInOrder.length; i++) {
-            setTimeout(() => {
-                const node = visitedNodesInOrder[i];
-                const newGrid = this.state.grid.slice();
-                const newNode = {
-                    ...node,
-                    isVisited: true,
-                };
-                newGrid[node.row][node.col] = newNode;
-                this.setState({ grid: newGrid });
-            }, 1000);
-        }
-    }
-
-    visualiseDijkstra() {
-        const { grid } = this.state;
-        const startNode = grid[this.START_NODE_ROW][this.START_NODE_COL];
-        const finishNode = grid[this.FINISH_NODE_ROW][this.FINISH_NODE_COL];
-        const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
-        this.animateDijkstra(visitedNodesInOrder);
-    }
-
     getInitialGrid() {
-        let grid = [];
-        let nRows = this.NUMBER_OF_ROWS;
-        let nCols = this.NUMBER_OF_COLUMNS;
+        const grid = [];
+        const nRows = this.NUMBER_OF_ROWS;
+        const nCols = this.NUMBER_OF_COLUMNS;
         for (let iRow = 0; iRow < nRows; iRow++) {
-            let row = [];
+            const row = [];
             for (let iCol = 0; iCol < nCols; iCol++) {
                 row.push(this.createNode(iCol, iRow));
             }
@@ -65,40 +43,77 @@ export class PathFindingVisualiser extends Component {
         return grid;
     }
 
-    createNode(iCol, iRow) {
+    createNode(iCol, iRow) { 
         return {
-            key: "r" + iRow + "c" + iCol,
             col: iCol,
             row: iRow,
             isStart: iRow === this.START_NODE_ROW && iCol === this.START_NODE_COL,
             isFinish: iRow === this.FINISH_NODE_ROW && iCol === this.FINISH_NODE_COL,
             distance: Infinity,
             isVisited: false,
-            isWall: false,
             previousNode: null,
+            isWall: false
         };
     }
 
+    handleMouseDown(row, col) {
+        const newGrid = this.getNewGridWithWallToggled(this.state.grid, row, col);
+        this.setState({ grid: newGrid, mouseIsPressed: true });
+    }
+
+    handleMouseEnter(row, col) {
+        if (!this.state.mouseIsPressed) return;
+        const newGrid = this.getNewGridWithWallToggled(this.state.grid, row, col);
+        this.setState({ grid: newGrid });
+    }
+
+    handleMouseUp() {
+        this.setState({ mouseIsPressed: false });
+    }
+
+    getNewGridWithWallToggled = (grid, row, col) => {
+        const newGrid = grid.slice();
+        const node = newGrid[row][col];
+        const newNode = {
+            ...node,
+            isWall: !node.isWall,
+        };
+        newGrid[row][col] = newNode;
+        return newGrid;
+    };
+
     render() {
-        const { grid } = this.state;
-        console.log(grid);
+        const { grid, mouseIsPressed } = this.state;
 
         return (
-            <>
+            <div>
                 <button onClick={() => this.visualiseDijkstra()}>
                     Visualise Dijkstra's Algorithm
-        </button>
+                </button>
                 <div className="grid">
-                    {grid.map((row) => {
+                    {grid.map((row, iRow) => {
                         return (
-                            <div>
-                                {row.map((node) => {
+                            <div key={iRow}>
+                                {row.map((node, iNode) => {
+                                    const {
+                                        row,
+                                        col,
+                                        isFinish,
+                                        isStart,
+                                        isWall
+                                    } = node;
                                     return (
-                                        <Node
-                                            key={node.key}
-                                            isStart={node.isStart}
-                                            isFinish={node.isFinish}
-                                            isVisited={node.isVisited}
+                                        <Node 
+                                            key={iNode}
+                                            col={col}
+                                            row={row}
+                                            isFinish={isFinish}
+                                            isStart={isStart}
+                                            isWall={isWall}
+                                            mouseIsPressed={mouseIsPressed}
+                                            onMouseDown={(row, col) => this.handleMouseDown(row, col)}
+                                            onMouseEnter={(row, col) => this.handleMouseEnter(row, col)}
+                                            onMouseUp={() => this.handleMouseUp()}
                                         ></Node>
                                     );
                                 })}
@@ -106,7 +121,39 @@ export class PathFindingVisualiser extends Component {
                         );
                     })}
                 </div>
-            </>
+            </div>
         );
+    }
+
+    visualiseDijkstra() {
+        const { grid } = this.state;
+        const startNode = grid[this.START_NODE_ROW][this.START_NODE_COL];
+        const finishNode = grid[this.FINISH_NODE_ROW][this.FINISH_NODE_COL];
+        const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
+        const path = getPath(visitedNodesInOrder);
+        this.animateDijkstra(visitedNodesInOrder, path);
+    }
+
+    animateDijkstra(visitedNodesInOrder, path) {
+        for (let i = 1; i < visitedNodesInOrder.length-1; i++) {
+            setTimeout(() => {
+                const node = visitedNodesInOrder[i];
+                document.getElementById(`node-${node.row}-${node.col}`).className =
+                    "node node-visited";
+            }, 10 * i);
+        }
+        setTimeout(() => {
+            this.animatePath(path);
+        }, 10 * visitedNodesInOrder.length);
+    }
+
+    animatePath(path) {
+        for (let i = path.length - 2; i > 0; i--) {
+            setTimeout(() => {
+                const node = path[i];
+                document.getElementById(`node-${node.row}-${node.col}`).className =
+                    "node node-path";
+            }, 50 * i);
+        }
     }
 }

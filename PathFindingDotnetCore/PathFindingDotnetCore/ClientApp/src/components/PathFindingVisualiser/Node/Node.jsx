@@ -8,9 +8,26 @@ export default class Node extends Component {
     }
 
     render() {
-        if (this.props.isStart) return (<div className="node node-start"></div>);
-        if (this.props.isFinish) return (<div className="node node-finish"></div>);
-        if (this.props.isVisited) return (<div className="node node-visited"></div>);
-        else return <div className="node"></div>
+        const {
+            col,
+            row,
+            isFinish,
+            isStart,
+            isWall,
+            onMouseDown,
+            onMouseEnter,
+            onMouseUp
+        } = this.props;
+        const extraClassName = isWall ? "node-wall" : isFinish ? "node-finish" : isStart ? "node-start" : "";
+
+        return (
+            <div
+                id={`node-${row}-${col}`}
+                className={`node ${extraClassName}`}
+                onMouseDown={() => onMouseDown(row, col)}
+                onMouseEnter={() => onMouseEnter(row, col)}
+                onMouseUp={() => onMouseUp()}
+            ></div>
+        );
     }
 }
