@@ -14,12 +14,12 @@ namespace PathFindingDotnetCore.Services
         {
             for (int i = 0; i < 5; i++)
             {
-                Grid grid = getRandomGrid(40, 40);
+                Grid grid = GetRandomGrid(40, 40);
                 grids.Add(grid);
             }
         }
 
-        private static Grid getRandomGrid(int width, int height)
+        private static Grid GetRandomGrid(int width, int height)
         {
             Random rnd = new Random();
             Grid grid = new Grid(height, width);

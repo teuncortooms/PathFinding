@@ -12,9 +12,6 @@ namespace PathFindingDotnetCore.Models
         public bool IsStart { get; set; }
         public bool IsFinish { get; set; } 
         public bool IsWall { get; set; }
-        public bool IsVisited { get; set; }
-        public int Distance { get; set; }
-        public Node PreviousNode { get; set; }
 
         public Node()
         {
@@ -22,8 +19,6 @@ namespace PathFindingDotnetCore.Models
             IsStart = false;
             IsFinish = false;
             IsWall = false;
-            IsVisited = false; 
-            Distance = Convert.ToInt32(double.PositiveInfinity);
         }
     }
 }
