@@ -14,6 +14,13 @@ namespace PathFindingDotnetCore.Models
         {
             Id = Guid.NewGuid();
             Nodes = new Node[height, width];
+            for (int row = 0; row < height; row++)
+            {
+                for (int col = 0; col < width; col++)
+                {
+                    Nodes[row, col] = new Node();
+                }
+            }
         }
 
         public Grid(Node[,] nodes)
@@ -32,11 +39,8 @@ namespace PathFindingDotnetCore.Models
             {
                 for (int gridCol = 0; gridCol < Nodes.GetLength(1); gridCol++)
                 {
-                    if (Nodes[gridRow, gridCol].IsWall) continue;
-                    AddEdgesOfCurrentVertexToGraph(graph, currentVertex, gridRow, gridCol);
-                    if (Nodes[gridRow, gridCol].IsStart) src = currentVertex;
-                    if (Nodes[gridRow, gridCol].IsFinish) dest = currentVertex;
-
+                    if (!Nodes[gridRow, gridCol].IsWall)
+                        AddEdgesOfCurrentVertexToGraph(graph, currentVertex, gridRow, gridCol);
                     currentVertex++;
                 }
             }
@@ -46,37 +50,19 @@ namespace PathFindingDotnetCore.Models
 
         private void AddEdgesOfCurrentVertexToGraph(int[,] graph, int currentVertex, int gridRow, int gridCol)
         {
-            if (gridCol < Nodes.GetLength(1) - 1) // if has right neighbour
+            // if has right non-wall neighbour
+            if (gridCol < Nodes.GetLength(1) - 1 && !Nodes[gridRow, gridCol + 1].IsWall)
             {
-                if (!Nodes[gridRow, gridCol + 1].IsWall)
-                {
-                    int rightNeighbour = currentVertex + 1;
-                    graph[rightNeighbour, currentVertex] = 1; // add edge with weight 1
-                    graph[currentVertex, rightNeighbour] = 1; // bidirectional edge
-                }
+                int rightNeighbour = currentVertex + 1;
+                AddEdgeWithWeight1(graph, currentVertex, rightNeighbour);
             }
-
-            if (gridRow < Nodes.GetLength(0) - 1) // if has below neighbour
+            // if has below non-wall neighbour
+            if (gridRow < Nodes.GetLength(0) - 1 && !Nodes[gridRow + 1, gridCol].IsWall)
             {
-                if (!Nodes[gridRow + 1, gridCol].IsWall)
-                {
-                    int belowNeighbour = currentVertex + Nodes.GetLength(1);
-                    AddEdgeWithWeight1(graph, currentVertex, belowNeighbour);
-                }
+                int belowNeighbour = currentVertex + Nodes.GetLength(1);
+                AddEdgeWithWeight1(graph, currentVertex, belowNeighbour);
             }
-
-            //if (col > 0) // if has left neighbour
-            //{
-            //    int leftNeighbour = currentVertex - 1;
-            //    graph[leftNeighbour, currentVertex] = 1; // add edge with weight 1
-            //    graph[currentVertex, leftNeighbour] = 1; // bidirectional edge
-            //}
-            //if (row > 0) // if has above neighbour
-            //{
-            //    int aboveNeighbour = currentVertex - Nodes.GetLength(1);
-            //    graph[aboveNeighbour, currentVertex] = 1; // add edge with weight 1
-            //    graph[currentVertex, aboveNeighbour] = 1; // bidirectional edge
-            //}
+            // bidirectional edges, so above and left aren't needed
         }
 
         private void AddEdgeWithWeight1(int[,] graph, int currentVertex, int neighbour)
