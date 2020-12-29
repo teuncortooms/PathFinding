@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace PathFindingDotnetCore.Models
 {
-    public class Node
+    public class NodeVM
     {
-        public bool Id { get; private set; }
-        public bool IsStart { get; private set; }
-        public bool IsFinish { get; private set; } 
-        public bool IsWall { get; private set; }
+        public bool Id { get; set; }
+        public bool IsStart { get; set; }
+        public bool IsFinish { get; set; } 
+        public bool IsWall { get; set; }
 
-        public Node()
+        public NodeVM()
         {
-            Id = 
             IsStart = false;
             IsFinish = false;
             IsWall = false;

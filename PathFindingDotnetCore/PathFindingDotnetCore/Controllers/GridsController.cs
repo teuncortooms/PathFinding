@@ -12,9 +12,9 @@ namespace PathFindingDotnetCore.Controllers
     [Route("[controller]")]
     public class GridsController : Controller
     {
-        private readonly GridService gridService;
+        private readonly GridRepository gridService;
 
-        public GridsController(GridService gridService)
+        public GridsController(GridRepository gridService)
         {
             this.gridService = gridService;
         }

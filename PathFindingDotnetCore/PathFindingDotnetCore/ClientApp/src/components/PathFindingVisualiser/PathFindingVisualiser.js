@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import Node from "./Node/Node.js";
-import { dijkstra, getPath } from "../../algorithms/dijkstra.js";
-
+import { DIJKSTRA_API_URL } from "../../constants";
 import "./PathFindingVisualiser.css";
 
 
-export class PathFindingVisualiser extends Component {
+class PathFindingVisualiser extends Component {
     static displayName = PathFindingVisualiser.name;
 
     NUMBER_OF_ROWS = 20;
@@ -43,7 +42,7 @@ export class PathFindingVisualiser extends Component {
         return grid;
     }
 
-    createNode(iCol, iRow) { 
+    createNode(iCol, iRow) {
         return {
             col: iCol,
             row: iRow,
@@ -87,7 +86,7 @@ export class PathFindingVisualiser extends Component {
 
         return (
             <div>
-                <button onClick={() => this.visualiseDijkstra()}>
+                <button onClick={() => this.startDijkstra()}>
                     Visualise Dijkstra's Algorithm
                 </button>
                 <div className="grid">
@@ -103,7 +102,7 @@ export class PathFindingVisualiser extends Component {
                                         isWall
                                     } = node;
                                     return (
-                                        <Node 
+                                        <Node
                                             key={iNode}
                                             col={col}
                                             row={row}
@@ -125,17 +124,28 @@ export class PathFindingVisualiser extends Component {
         );
     }
 
-    visualiseDijkstra() {
-        const { grid } = this.state;
-        const startNode = grid[this.START_NODE_ROW][this.START_NODE_COL];
-        const finishNode = grid[this.FINISH_NODE_ROW][this.FINISH_NODE_COL];
-        const visitedNodesInOrder = dijkstra(grid, startNode, finishNode);
-        const path = getPath(visitedNodesInOrder);
-        this.animateDijkstra(visitedNodesInOrder, path);
+    startDijkstra() {
+        fetch(`${"https://localhost:44373/Dijkstra/analyse"}`, {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nodes: this.state.grid
+            })
+        })
+            .then(result => result.json())
+            .then(analytics => {
+                this.animateDijkstra(analytics);
+            })
+            .catch(err => console.log(err));
     }
 
-    animateDijkstra(visitedNodesInOrder, path) {
-        for (let i = 1; i < visitedNodesInOrder.length-1; i++) {
+    animateDijkstra(analytics) {
+        const visitedNodesInOrder = analytics.visitedInOrder;
+        const path = analytics.shortestPathToDest;
+
+        for (let i = 1; i < visitedNodesInOrder.length - 1; i++) {
             setTimeout(() => {
                 const node = visitedNodesInOrder[i];
                 document.getElementById(`node-${node.row}-${node.col}`).className =
@@ -157,3 +167,4 @@ export class PathFindingVisualiser extends Component {
         }
     }
 }
+export default PathFindingVisualiser;

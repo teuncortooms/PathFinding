@@ -11,6 +11,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
         private readonly int nVertices;
         private int[] distances; // distances[i] will hold the shortest distance from src to i 
         private bool[] isVisited; // isVisited[i] will be true if distances[i] is set
+
         public int[] VisitedInOrder { get; private set; } // needed for frontend to visualise analysis
         public int[] Parents { get; private set; } // parents[i] will hold closest vertex between src and i
         public int[] ShortestPathToDest { get; private set; }

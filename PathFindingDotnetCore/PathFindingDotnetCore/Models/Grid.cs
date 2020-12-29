@@ -71,12 +71,12 @@ namespace PathFindingDotnetCore.Models
             graph[currentVertex, neighbour] = 1; // bidirectional edge
         }
 
-        public int GetSource()
+        public int GetSourceSerial()
         {
             return GetVertex((row, col) => Nodes[row, col].IsStart);
         }
 
-        public int GetDestination()
+        public int GetDestinationSerial()
         {
             return GetVertex((row, col) => Nodes[row, col].IsFinish);
         }
@@ -87,7 +87,7 @@ namespace PathFindingDotnetCore.Models
             int currentVertex = 0;
             for (int gridRow = 0; gridRow < Nodes.GetLength(0); gridRow++)
             {
-                for (int gridCol = 0; gridCol < Nodes.GetLength(0); gridCol++)
+                for (int gridCol = 0; gridCol < Nodes.GetLength(1); gridCol++)
                 {
                     if (isRequest(gridRow, gridCol)) return currentVertex;
                     currentVertex++;

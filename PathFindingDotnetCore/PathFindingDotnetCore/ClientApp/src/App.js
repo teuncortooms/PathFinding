@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
-import { PathFindingVisualiser } from './components/PathFindingVisualiser/PathFindingVisualiser';
-import { FetchData } from './components/FetchData';
-import { Counter } from './components/Counter';
+import Home from './components/GridManager/Home';
+import PathFindingVisualiser from './components/PathFindingVisualiser/PathFindingVisualiser'
 
 import './custom.css'
 
@@ -13,9 +12,8 @@ export default class App extends Component {
   render () {
     return (
       <Layout>
-        <Route exact path='/' component={PathFindingVisualiser} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data' component={FetchData} />
+            <Route exact path='/' component={Home} />
+            <Route path='/Visualiser' component={PathFindingVisualiser} />
       </Layout>
     );
   }

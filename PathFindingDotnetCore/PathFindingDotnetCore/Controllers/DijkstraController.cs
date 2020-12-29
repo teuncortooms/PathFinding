@@ -13,8 +13,8 @@ namespace PathFindingDotnetCore.Controllers
     public class DijkstraController : Controller
     {
         // GET dijkstra/example
-        [HttpGet("Example")]
-        public DijkstraAnalysis Get()
+        [HttpGet("example")]
+        public DijkstraAnalysis Example()
         {
             int[,] graph = new int[,] { { 0,  4,  0,  0,  0,  0,  0,  8,  0 },
                                         { 4,  0,  8,  0,  0,  0,  0,  11, 0 },
@@ -30,11 +30,32 @@ namespace PathFindingDotnetCore.Controllers
 
         // POST dijkstra
         [HttpPost("analyse")]
-        public DijkstraAnalysis Get([FromBody]Grid grid, int src, int dest)
+        public DijkstraAnalysis Analyse([FromBody] GridVM input)
         {
+            Node[,] nodes = ConvertInputToNodesArray(input);
+            Grid grid = new Grid(nodes);
+
             int[,] graph = grid.GetGraph();
-            DijkstraAnalysis dijkstra = new DijkstraAnalysis(graph, src, dest);
-            return dijkstra;
+            int src = grid.GetSourceSerial();
+            int dest = grid.GetDestinationSerial();
+
+            return new DijkstraAnalysis(graph, src, dest);
+        }
+
+        private Node[,] ConvertInputToNodesArray(GridVM input)
+        {
+            int nRows = input.Nodes.Count();
+            int nCols = input.Nodes[0].Count();
+            Node[,] nodes = new Node[nRows, nCols];
+            for (int iRow = 0; iRow < nRows; iRow++)
+            {
+                for (int iCol = 0; iCol < nCols; iCol++)
+                {
+                    nodes[iRow, iCol] = input.Nodes[iRow][iCol];
+                }
+            }
+
+            return nodes;
         }
     }
 }

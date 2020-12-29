@@ -1,7 +1,8 @@
 ﻿import React, { Component } from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import PathFindingVisualiser from './PathFindingVisualiser';
-import { GRIDS_API_URL } from '../constants';
+import { GRIDS_API_URL } from '../../constants';
+import DataTable from './GridsTable';
+import RegistrationModal from './EditGridModal';
 
 class Home extends Component {
     state = {
@@ -12,8 +13,8 @@ class Home extends Component {
     }
     getGrids = () => {
         fetch(GRIDS_API_URL)
-            .then(res => res.json())
-            .then(res => this.setState({ grids: res }))
+            .then(result => result.json())
+            .then(result => this.setState({ grids: result }))
             .catch(err => console.log(err));
     }
     addGridToState = grid => {
@@ -32,7 +33,7 @@ class Home extends Component {
         return <Container style={{ paddingTop: "100px" }}>
             <Row>
                 <Col>
-                    <h3>My First React + ASP.NET CRUD React</h3>
+                    <h3>Grid management</h3>
                 </Col>
             </Row>
             <Row>

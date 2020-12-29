@@ -64,7 +64,7 @@ namespace PathFindingDotnetCore.Models.Tests
             Grid g = new Grid(3, 3);
             g.Nodes[1, 1].IsStart = true;
 
-            int actual = g.GetSource();
+            int actual = g.GetSourceSerial();
             int expected = 4;
 
             Assert.AreEqual(actual, expected);
@@ -76,7 +76,7 @@ namespace PathFindingDotnetCore.Models.Tests
             Grid g = new Grid(3, 3);
             g.Nodes[1, 1].IsFinish = true;
 
-            int actual = g.GetDestination();
+            int actual = g.GetDestinationSerial();
             int expected = 4;
 
             Assert.AreEqual(actual, expected);

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PathFindingDotnetCore.Services
 {
-    public class GridService
+    public class GridRepository
     {
         private static readonly List<Grid> grids = new List<Grid>();
 
-        static GridService()
+        static GridRepository()
         {
             for (int i = 0; i < 5; i++)
             {
