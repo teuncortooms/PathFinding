@@ -19,20 +19,20 @@ namespace PathFindingDotnetCore.Services
             }
         }
 
-        private static Grid GetRandomGrid(int width, int height)
+        private static Grid GetRandomGrid(int rows, int cols)
         {
             Random rnd = new Random();
-            Grid grid = new Grid(height, width);
+            Grid grid = new Grid(rows, cols);
 
             // set walls
-            int nWalls = width * height / 4;
+            int nWalls = cols * rows / 4;
             for (int j = 0; j < nWalls; j++)
             {
-                grid.Nodes[rnd.Next(height), rnd.Next(width)].IsWall = true;
+                grid.Nodes2D[rnd.Next(rows), rnd.Next(cols)].IsWall = true;
             }
 
             // set start
-            Node startNode = grid.Nodes[rnd.Next(height), rnd.Next(width)];
+            Node startNode = grid.Nodes2D[rnd.Next(rows), rnd.Next(cols)];
             startNode.IsStart = true;
             startNode.IsWall = false;
 
@@ -40,7 +40,7 @@ namespace PathFindingDotnetCore.Services
             Node finishNode;
             do
             {
-                finishNode = grid.Nodes[rnd.Next(height), rnd.Next(width)];
+                finishNode = grid.Nodes2D[rnd.Next(rows), rnd.Next(cols)];
             } while (finishNode.IsStart);
             finishNode.IsFinish = true;
             finishNode.IsWall = false;
@@ -60,7 +60,7 @@ namespace PathFindingDotnetCore.Services
 
         public Grid Create(Grid input)
         {
-            Grid newGrid = new Grid(input.Nodes);
+            Grid newGrid = new Grid(input.Nodes2D);
             grids.Add(newGrid);
             return newGrid;
         }
@@ -68,7 +68,7 @@ namespace PathFindingDotnetCore.Services
         public void Update(Guid id, Grid grid)
         {
             Grid found = grids.Where(n => n.Id == id).FirstOrDefault();
-            found.Nodes = grid.Nodes;
+            found.Nodes2D = grid.Nodes2D;
         }
 
         public void Delete(Guid id)

@@ -7,14 +7,14 @@ namespace PathFindingDotnetCore.Models
 {
     public class Edge
     {
-        public Node From { get; }
-        public Node To { get; }
+        public int FromId { get; }
+        public int ToId { get; }
         public int Weight { get; }
 
-        Edge(Node from, Node to, int weight)
+        public Edge(int fromId, int toId, int weight)
         {
-            From = from;
-            To = to;
+            FromId = fromId;
+            ToId = toId;
             Weight = weight;
         }
     }

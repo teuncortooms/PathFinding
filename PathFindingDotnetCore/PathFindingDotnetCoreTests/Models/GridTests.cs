@@ -40,7 +40,7 @@ namespace PathFindingDotnetCore.Models.Tests
         public void GetGraph_WithWalls_Test()
         {
             Grid g = new Grid(3, 3);
-            g.Nodes[1, 1].IsWall = true;
+            g.Nodes2D[1, 1].IsWall = true;
 
             int[,] actual = g.GetGraph();
                                           //  0,  1,  2,  3,  4,  5,  6,  7,  8
@@ -62,7 +62,7 @@ namespace PathFindingDotnetCore.Models.Tests
         public void GetSourceTest()
         {
             Grid g = new Grid(3, 3);
-            g.Nodes[1, 1].IsStart = true;
+            g.Nodes2D[1, 1].IsStart = true;
 
             int actual = g.GetSourceSerial();
             int expected = 4;
@@ -74,7 +74,7 @@ namespace PathFindingDotnetCore.Models.Tests
         public void GetDestinationTest()
         {
             Grid g = new Grid(3, 3);
-            g.Nodes[1, 1].IsFinish = true;
+            g.Nodes2D[1, 1].IsFinish = true;
 
             int actual = g.GetDestinationSerial();
             int expected = 4;

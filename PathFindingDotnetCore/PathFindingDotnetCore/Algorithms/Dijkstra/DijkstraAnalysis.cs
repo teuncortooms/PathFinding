@@ -7,19 +7,18 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 {
     public class DijkstraAnalysis
     {
-        private readonly int[,] graph;
-        private readonly int nVertices;
-        private int[] distances; // distances[i] will hold the shortest distance from src to i 
+        private readonly Graph graph;
+
+        private int[] distances; // distances[i] will hold the shortest distance from src to graph.Nodes[i] 
         private bool[] isVisited; // isVisited[i] will be true if distances[i] is set
 
         public int[] VisitedInOrder { get; private set; } // needed for frontend to visualise analysis
         public int[] Parents { get; private set; } // parents[i] will hold closest vertex between src and i
         public int[] ShortestPathToDest { get; private set; }
 
-        public DijkstraAnalysis(int[,] graph, int src, int dest)
+        public DijkstraAnalysis(Graph graph)
         {
             this.graph = graph;
-            this.nVertices = graph.GetLength(0);
             InitMemberArrays();
             this.distances[src] = 0;
             LogDistances();
@@ -29,12 +28,13 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 
         private void InitMemberArrays()
         {
-            distances = new int[nVertices];
-            isVisited = new bool[nVertices];
-            VisitedInOrder = new int[nVertices];
-            Parents = new int[nVertices];
+            int nNodes = graph.Nodes.Count;
+            distances = new int[nNodes];
+            isVisited = new bool[nNodes];
+            VisitedInOrder = new int[nNodes];
+            Parents = new int[nNodes];
 
-            for (int i = 0; i < nVertices; i++)
+            for (int i = 0; i < nNodes; i++)
             {
                 distances[i] = int.MaxValue;
                 isVisited[i] = false;

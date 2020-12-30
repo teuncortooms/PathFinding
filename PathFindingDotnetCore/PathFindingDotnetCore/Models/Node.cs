@@ -8,17 +8,17 @@ namespace PathFindingDotnetCore.Models
 {
     public class Node
     {
-        public bool Id { get; private set; }
-        public bool IsStart { get; private set; }
-        public bool IsFinish { get; private set; } 
-        public bool IsWall { get; private set; }
+        public int Id { get; private set; }
+        public bool IsStart { get; set; }
+        public bool IsFinish { get; set; } 
+        public bool IsWall { get; set; }
 
-        public Node()
+        public Node(int id = 0, bool isStart = false, bool isFinish = false, bool isWall = false)
         {
-            Id = 
-            IsStart = false;
-            IsFinish = false;
-            IsWall = false;
+            Id = id == 0 ? new Random().Next() : id;
+            IsStart = isStart;
+            IsFinish = isFinish;
+            IsWall = isWall;
         }
     }
 }
