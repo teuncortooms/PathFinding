@@ -1,4 +1,4 @@
-﻿export function dijkstra(grid, startNode, finishNode) {
+﻿export function dijkstraAnalyse(grid, startNode, finishNode) {
     if (!startNode || !finishNode || startNode === finishNode) return false; 
 
     const visitedNodesInOrder = [];
@@ -49,16 +49,30 @@ function getUnvisitedNeighbours(node, grid) {
     return neighbours.filter(neighbour => !neighbour.isVisited);
 }
 
-export function getPath(visitedNodesInOrder) {
+export function getDijkstraReport(visitedNodesInOrder) {
+    const visitedInOrder = getVisitedIdsInOrder(visitedNodesInOrder);
+    const shortestPathToDest = getPath(visitedNodesInOrder);
+    return { visitedInOrder, shortestPathToDest };
+}
+
+function getVisitedIdsInOrder(visitedNodesInOrder) {
+    const visitedIds = [];
+    for (let i = 0; i < visitedNodesInOrder.length; i++) {
+        visitedIds[i] = visitedNodesInOrder[i].id;
+    }
+    return visitedIds;
+}
+
+function getPath(visitedNodesInOrder) {
     const path = [];
     const last = visitedNodesInOrder.length - 1;
     let node = visitedNodesInOrder[last];
     if (!node.isFinish) return false;
 
     while (!node.isStart) {
-        path.push(node);
+        path.push(node.id);
         node = node.previousNode;
     }
-    path.push(node);
+    path.push(node.id);
     return path;
 }

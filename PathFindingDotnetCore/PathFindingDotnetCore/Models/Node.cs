@@ -8,17 +8,28 @@ namespace PathFindingDotnetCore.Models
 {
     public class Node
     {
-        public int Id { get; private set; }
-        public bool IsStart { get; set; }
-        public bool IsFinish { get; set; } 
-        public bool IsWall { get; set; }
+        private bool _isStart;
+        private int _distanceToSrc;
 
-        public Node(int id = 0, bool isStart = false, bool isFinish = false, bool isWall = false)
+        public int Id { get; private set; }
+        public bool IsWall { get; set; }
+        public bool IsFinish { get; set; }
+        public bool IsStart { get { return _isStart; } set { DistanceToSrc = 0; _isStart = value; } }
+
+        // dijkstra props
+        public int VisitedSerialNo { get; set; }
+        public int ParentId { get; set; }
+        public int DistanceToSrc { get { return _distanceToSrc; } set { if(!IsStart) _distanceToSrc = value; } }
+
+        public Node(int id = -1, bool isStart = false, bool isFinish = false, bool isWall = false)
         {
-            Id = id == 0 ? new Random().Next() : id;
+            Id = id == -1 ? new Random().Next() : id;
             IsStart = isStart;
             IsFinish = isFinish;
             IsWall = isWall;
+            VisitedSerialNo = -1;
+            ParentId = -1;
+            DistanceToSrc = int.MaxValue;
         }
     }
 }

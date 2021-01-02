@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 import Node from "./Node/Node.js";
 import { DIJKSTRA_API_URL } from "../../constants";
+import { dijkstraAnalyse, getDijkstraReport } from "../../algorithms/dijkstra.js"
 import "./PathFindingVisualiser.css";
 
 
@@ -19,6 +21,7 @@ class PathFindingVisualiser extends Component {
         super(props);
         this.state = {
             grid: [],
+            speed: 3,
             mouseIsPressed: false
         };
     }
@@ -32,18 +35,21 @@ class PathFindingVisualiser extends Component {
         const grid = [];
         const nRows = this.NUMBER_OF_ROWS;
         const nCols = this.NUMBER_OF_COLUMNS;
+        let id = 0;
         for (let iRow = 0; iRow < nRows; iRow++) {
             const row = [];
             for (let iCol = 0; iCol < nCols; iCol++) {
-                row.push(this.createNode(iCol, iRow));
+                row.push(this.createNode(iCol, iRow, id));
+                id++;
             }
             grid.push(row);
         }
         return grid;
     }
 
-    createNode(iCol, iRow) {
+    createNode(iCol, iRow, id) {
         return {
+            id: id,
             col: iCol,
             row: iRow,
             isStart: iRow === this.START_NODE_ROW && iCol === this.START_NODE_COL,
@@ -79,16 +85,33 @@ class PathFindingVisualiser extends Component {
         };
         newGrid[row][col] = newNode;
         return newGrid;
-    };
+    }
+
+    setSpeed = e => {
+        this.setState({ speed: e.target.value })
+    }
 
     render() {
         const { grid, mouseIsPressed } = this.state;
 
         return (
             <div>
-                <button onClick={() => this.startDijkstra()}>
-                    Visualise Dijkstra's Algorithm
-                </button>
+                <Form inline>
+                    <Button className="m-1" onClick={() => this.startJSDijkstra()}>
+                        Dijkstra JS
+                    </Button>
+                    <Button className="m-1" onClick={() => this.startAPIDijkstra()}>
+                        Dijkstra API
+                    </Button>
+                    <Button className="m-1" onClick={() => this.reset()}>
+                        Reset
+                    </Button>
+                    <FormGroup className="m-1">
+                        <Label for="speed">Speed:</Label>
+                        <Input className="col-3" type="text" name="speed" onChange={this.setSpeed} value={this.state.speed} />
+                    </FormGroup>
+                </Form>
+
                 <div className="grid">
                     {grid.map((row, iRow) => {
                         return (
@@ -97,6 +120,7 @@ class PathFindingVisualiser extends Component {
                                     const {
                                         row,
                                         col,
+                                        id,
                                         isFinish,
                                         isStart,
                                         isWall
@@ -104,6 +128,7 @@ class PathFindingVisualiser extends Component {
                                     return (
                                         <Node
                                             key={iNode}
+                                            id={id}
                                             col={col}
                                             row={row}
                                             isFinish={isFinish}
@@ -124,47 +149,89 @@ class PathFindingVisualiser extends Component {
         );
     }
 
-    startDijkstra() {
+    startJSDijkstra() {
+        const { grid } = this.state;
+        const startNode = grid[this.START_NODE_ROW][this.START_NODE_COL];
+        const finishNode = grid[this.FINISH_NODE_ROW][this.FINISH_NODE_COL];
+        const visitedNodesInOrder = dijkstraAnalyse(grid, startNode, finishNode);
+        const dijkstraReport = getDijkstraReport(visitedNodesInOrder);
+        this.animateDijkstra(dijkstraReport);
+    }
+
+    startAPIDijkstra() {
+        const apiData = this.mapGridToAPIData();
+        console.log(JSON.stringify({ nodes: apiData }));
+
         fetch(`${"https://localhost:44373/Dijkstra/analyse"}`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                nodes: this.state.grid
+                nodes: apiData
             })
         })
             .then(result => result.json())
-            .then(analytics => {
-                this.animateDijkstra(analytics);
-            })
+            .then(dijkstraReport => this.animateDijkstra(dijkstraReport))
             .catch(err => console.log(err));
     }
 
-    animateDijkstra(analytics) {
-        const visitedNodesInOrder = analytics.visitedInOrder;
-        const path = analytics.shortestPathToDest;
+    mapGridToAPIData() {
+        const apiData = [];
+        this.state.grid.map(row => {
+            const apiRow = [];
+            row.map(node => {
+                apiRow.push(
+                    {
+                        id: node.id,
+                        isStart: node.isStart,
+                        isFinish: node.isFinish,
+                        isWall: node.isWall
+                    }
+                )
+            });
+            apiData.push(apiRow);
+        });
+        return apiData;
+    }
+
+    animateDijkstra(dijkstraReport) {
+        console.log(dijkstraReport);
+        const visitedNodesInOrder = dijkstraReport.visitedInOrder;
+        const path = dijkstraReport.shortestPathToDest;
 
         for (let i = 1; i < visitedNodesInOrder.length - 1; i++) {
             setTimeout(() => {
-                const node = visitedNodesInOrder[i];
-                document.getElementById(`node-${node.row}-${node.col}`).className =
+                const nodeId = visitedNodesInOrder[i];
+                document.getElementById(`node-${nodeId}`).className = // non-react hack
                     "node node-visited";
-            }, 10 * i);
+            }, 10 / this.state.speed * i);
         }
         setTimeout(() => {
             this.animatePath(path);
-        }, 10 * visitedNodesInOrder.length);
+        }, 10 / this.state.speed * visitedNodesInOrder.length);
     }
 
     animatePath(path) {
         for (let i = path.length - 2; i > 0; i--) {
             setTimeout(() => {
-                const node = path[i];
-                document.getElementById(`node-${node.row}-${node.col}`).className =
+                const nodeId = path[i];
+                document.getElementById(`node-${nodeId}`).className =
                     "node node-path";
-            }, 50 * i);
+            }, 50 / this.state.speed * i);
         }
+    }
+
+    reset() {
+        const grid = this.getInitialGrid();
+        for (let iRow = 0; iRow < grid.length; iRow++) { // hack to undo non-react hack above
+            let row = grid[iRow];
+            for (let iCol = 0; iCol < row.length; iCol++) {
+                const nodeId = grid[iRow][iCol].id;
+                document.getElementById(`node-${nodeId}`).classList.remove("node-visited", "node-path");
+            }
+        }
+        this.setState({ grid });
     }
 }
 export default PathFindingVisualiser;

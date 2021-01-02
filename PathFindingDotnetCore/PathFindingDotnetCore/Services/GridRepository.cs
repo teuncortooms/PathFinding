@@ -28,7 +28,7 @@ namespace PathFindingDotnetCore.Services
             int nWalls = cols * rows / 4;
             for (int j = 0; j < nWalls; j++)
             {
-                grid.Nodes2D[rnd.Next(rows), rnd.Next(cols)].IsWall = true;
+                grid.ToggleWall(rnd.Next(rows), rnd.Next(cols));
             }
 
             // set start
@@ -65,11 +65,11 @@ namespace PathFindingDotnetCore.Services
             return newGrid;
         }
 
-        public void Update(Guid id, Grid grid)
-        {
-            Grid found = grids.Where(n => n.Id == id).FirstOrDefault();
-            found.Nodes2D = grid.Nodes2D;
-        }
+        //public void Update(Guid id, Grid grid)
+        //{
+        //    Grid found = grids.Where(n => n.Id == id).FirstOrDefault();
+        //    found.Nodes2D = grid.Nodes2D;
+        //}
 
         public void Delete(Guid id)
         {

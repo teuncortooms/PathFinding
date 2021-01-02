@@ -42,10 +42,13 @@ namespace PathFindingDotnetCore.Controllers
 
         // PUT grids/5
         [HttpPut("{id}")]
+#pragma warning disable IDE0060 // Remove unused parameter
         public IActionResult Put(Guid id, [FromBody] Grid grid)
+#pragma warning restore IDE0060 // Remove unused parameter
         {
-            gridService.Update(id, grid);
-            return NoContent();
+            throw new NotImplementedException();
+            //gridService.Update(id, grid);
+            //return NoContent();
         }
 
         // DELETE grids/5

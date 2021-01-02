@@ -8,7 +8,7 @@ namespace PathFindingDotnetCore.Models
 {
     public class NodeVM
     {
-        public bool Id { get; set; }
+        public int Id{ get; set; }
         public bool IsStart { get; set; }
         public bool IsFinish { get; set; } 
         public bool IsWall { get; set; }

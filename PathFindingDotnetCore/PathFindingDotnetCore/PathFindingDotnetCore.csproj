@@ -22,11 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\_archive\algorithms\dijkstra.js" />
+    <None Remove="ClientApp\src\algorithms\dijkstra.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\_archive\algorithms\dijkstra.js" />
+    <TypeScriptCompile Include="ClientApp\src\algorithms\dijkstra.js" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
