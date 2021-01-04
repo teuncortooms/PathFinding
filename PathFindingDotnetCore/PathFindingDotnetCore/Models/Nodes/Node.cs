@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PathFindingDotnetCore.Models
 {
-    public class Node
+    public class Node : INode
     {
         private bool _isStart;
         private int _distanceToSrc;

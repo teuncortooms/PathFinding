@@ -52,8 +52,9 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
             {
                 if (IsNotVisited(newNode))
                 {
-                    // TODO: this takes a long time! 
-                    // a) searches ALL (upto 3080) edges. In the original 2d-array I could just use indexes (I wanted to use ids instead of indexes for readability)
+                    // TODO: refactor because increases complexity from O(V^2) to O(V * V * V^2)
+                    // a) searches ALL (upto 3080) edges. In the original 2d-array I could just use indexes 
+                    //    (I wanted to use ids instead of indexes for readability)
                     // b) does this for ALL (upto 800) non-visited nodes
                     // c) for ALL visited nodes
                     Edge connection = graph.Edges.Find(edge => edge.FromId == currentNode.Id && edge.ToId == newNode.Id);
@@ -81,10 +82,10 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
             var nodes = graph.Nodes;
             Node currentNode = nodes.Find(node => node.IsFinish);
 
-            while (currentNode != null)
+            while (currentNode != null) // NB: another O(V^2) in worst case, makes O(2V^2). Still equals O(V^2) in asymptotic analysis
             {
                 Report.ShortestPathToDest.Insert(0, currentNode.Id);
-                currentNode = nodes.Find(node => node.Id == currentNode.ParentId);
+                currentNode = nodes.Find(node => node.Id == currentNode.ParentId); // hidden iteration
             }
         }
     }

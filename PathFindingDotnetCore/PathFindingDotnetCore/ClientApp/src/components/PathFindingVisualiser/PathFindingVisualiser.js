@@ -103,6 +103,9 @@ class PathFindingVisualiser extends Component {
                     <Button className="m-1" onClick={() => this.startAPIDijkstra()}>
                         Dijkstra API
                     </Button>
+                    <Button className="m-1" onClick={() => this.startAPINewDijkstra()}>
+                        Dijkstra v2 API
+                    </Button>
                     <Button className="m-1" onClick={() => this.reset()}>
                         Reset
                     </Button>
@@ -159,10 +162,18 @@ class PathFindingVisualiser extends Component {
     }
 
     startAPIDijkstra() {
-        const apiData = this.mapGridToAPIData();
+        this.startAPIAnalysis('https://localhost:44373/Dijkstra/analyse');
+    }
+
+    startAPINewDijkstra() {
+        this.startAPIAnalysis('https://localhost:44373/NewDijkstra/analyse');
+    }
+
+    startAPIAnalysis(API_URL) {
+        const apiData = this.mapGridToAPIGrid();
         console.log(JSON.stringify({ nodes: apiData }));
 
-        fetch(`${"https://localhost:44373/Dijkstra/analyse"}`, {
+        fetch(API_URL, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
@@ -176,7 +187,7 @@ class PathFindingVisualiser extends Component {
             .catch(err => console.log(err));
     }
 
-    mapGridToAPIData() {
+    mapGridToAPIGrid() {
         const apiData = [];
         this.state.grid.map(row => {
             const apiRow = [];
