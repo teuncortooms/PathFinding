@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 
 namespace PathFindingDotnetCore.Models
 {
-    public class BetterGraph
+    public class Graph
     {
-        public BetterNode[] NodeDetails { get; private set; }
+        public Node[] NodeDetails { get; private set; }
         public int[,] EdgeMatrix { get; private set; }
 
-        public BetterGraph(BetterGrid grid)
+        public Graph(Grid grid)
         {
             int n = grid.Nodes2D.Length;
-            NodeDetails = new BetterNode[n];
+            NodeDetails = new Node[n];
             EdgeMatrix = new int[n, n];
             for (int matrixRow = 0; matrixRow < n; matrixRow++)
                 for (int matrixCol = 0; matrixCol < n; matrixCol++)
@@ -23,9 +23,9 @@ namespace PathFindingDotnetCore.Models
             PopulateEdges(grid);
         }
 
-        private void PopulateNodes(BetterGrid grid)
+        private void PopulateNodes(Grid grid)
         {
-            BetterNode[,] nodes2d = grid.Nodes2D;
+            Node[,] nodes2d = grid.Nodes2D;
 
             int iNode = 0;
             for (int iRow = 0; iRow < nodes2d.GetLength(0); iRow++)
@@ -38,9 +38,9 @@ namespace PathFindingDotnetCore.Models
             }
         }
 
-        private void PopulateEdges(BetterGrid grid)
+        private void PopulateEdges(Grid grid)
         {
-            BetterNode[,] nodes2d = grid.Nodes2D;
+            Node[,] nodes2d = grid.Nodes2D;
             int nRows = nodes2d.GetLength(0);
             int nCols = nodes2d.GetLength(1);
             
@@ -49,7 +49,7 @@ namespace PathFindingDotnetCore.Models
             {
                 for (int iCol = 0; iCol < nCols; iCol++)
                 {
-                    BetterNode currentNode = nodes2d[iRow, iCol];
+                    Node currentNode = nodes2d[iRow, iCol];
                     if (!currentNode.IsWall)
                         AddEdgesOfNode(iNode, iRow, iCol, grid);
                     iNode++;
@@ -57,11 +57,11 @@ namespace PathFindingDotnetCore.Models
             }
         }
 
-        private void AddEdgesOfNode(int iNode, int iRow, int iCol, BetterGrid grid)
+        private void AddEdgesOfNode(int iNode, int iRow, int iCol, Grid grid)
         {
             if (this.NodeDetails[iNode] != grid.Nodes2D[iRow, iCol]) throw new Exception("Node index error!");
 
-            BetterNode[,] nodes2d = grid.Nodes2D;
+            Node[,] nodes2d = grid.Nodes2D;
             int nRow = nodes2d.GetLength(0); 
             int nCol = nodes2d.GetLength(1);
 

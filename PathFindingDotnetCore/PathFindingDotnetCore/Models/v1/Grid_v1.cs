@@ -5,21 +5,21 @@ using System.Threading.Tasks;
 
 namespace PathFindingDotnetCore.Models
 {
-    public class BetterGrid : IGrid
+    public class Grid_v1
     {
         public Guid Id { get; }
-        public BetterNode[,] Nodes2D { get; }
+        public Node_v1[,] Nodes2D { get; }
 
-        public BetterGrid(BetterNode[,] nodes)
+        public Grid_v1(Node_v1[,] nodes)
         {
             Id = Guid.NewGuid();
             Nodes2D = nodes;
         }
         
-        public BetterGrid(int rows, int cols)
+        public Grid_v1(int rows, int cols)
         {
             Id = Guid.NewGuid();
-            Nodes2D = new BetterNode[rows, cols];
+            Nodes2D = new Node_v1[rows, cols];
             BuildNodes(rows, cols);
         }
 
@@ -29,27 +29,27 @@ namespace PathFindingDotnetCore.Models
             {
                 for (int col = 0; col < cols; col++)
                 {
-                    Nodes2D[row, col] = new BetterNode();
+                    Nodes2D[row, col] = new Node_v1();
                 }
             }
         }
 
         public void SetStart(int row, int col)
         {
-            BetterNode oldStart = GetNode(node => node.IsStart);
+            Node_v1 oldStart = GetNode(node => node.IsStart);
             if (oldStart != null) oldStart.IsStart = false;
             Nodes2D[row, col].IsStart = true;
         }
 
         public void SetFinish(int row, int col)
         {
-            BetterNode oldFinish = GetNode(node => node.IsFinish);
+            Node_v1 oldFinish = GetNode(node => node.IsFinish);
             if (oldFinish != null) oldFinish.IsFinish = false;
             Nodes2D[row, col].IsFinish = true;
         }
 
-        private delegate bool IsRequestedNode(BetterNode node);
-        private BetterNode GetNode(IsRequestedNode isRequest)
+        private delegate bool IsRequestedNode(Node_v1 node);
+        private Node_v1 GetNode(IsRequestedNode isRequest)
         {
             for (int iRow = 0; iRow < Nodes2D.GetLength(0); iRow++)
             {
@@ -63,7 +63,7 @@ namespace PathFindingDotnetCore.Models
 
         public bool ToggleWall(int row, int col)
         {
-            BetterNode node = Nodes2D[row, col];
+            Node_v1 node = Nodes2D[row, col];
             node.IsWall = !node.IsWall;
             return node.IsWall;
         }

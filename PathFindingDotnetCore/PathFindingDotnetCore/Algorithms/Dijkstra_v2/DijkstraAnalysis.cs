@@ -5,16 +5,16 @@ using System.Diagnostics;
 
 namespace PathFindingDotnetCore.Algorithms.Dijkstra
 {
-    public class NewDijkstraAnalysis
+    public class DijkstraAnalysis
     {
-        private readonly BetterGraph graph;
+        private readonly Graph graph;
         private readonly int[] distanceToSrc;
         private readonly bool[] isVisited;
         private readonly int[] parents;
 
-        public NewDijkstraReport Report { get; }
+        public DijkstraReport Report { get; }
 
-        public NewDijkstraAnalysis(BetterGraph graph)
+        public DijkstraAnalysis(Graph graph)
         {
             this.graph = graph;
             int n = graph.NodeDetails.Length;
@@ -28,7 +28,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
                 parents[i] = -1;
             }
 
-            Report = new NewDijkstraReport();
+            Report = new DijkstraReport();
 
             int iSrc = graph.GetSourceIdx();
             int iDest = graph.GetDestinationIdx();

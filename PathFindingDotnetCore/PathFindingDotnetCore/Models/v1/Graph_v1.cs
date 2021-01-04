@@ -5,22 +5,22 @@ using System.Threading.Tasks;
 
 namespace PathFindingDotnetCore.Models
 {
-    public class Graph
+    public class Graph_v1
     {
-        public List<Node> Nodes { get; private set; }
-        public List<Edge> Edges { get; private set; }
+        public List<Node_v1> Nodes { get; private set; }
+        public List<Edge_v1> Edges { get; private set; }
 
-        public Graph(Grid grid)
+        public Graph_v1(Grid_v1 grid)
         {
-            Nodes = new List<Node>();
-            Edges = new List<Edge>(); 
+            Nodes = new List<Node_v1>();
+            Edges = new List<Edge_v1>(); 
             PopulateNodes(grid);
             PopulateEdges(grid);
         }
 
-        private void PopulateNodes(Grid grid)
+        private void PopulateNodes(Grid_v1 grid)
         {
-            Node[,] nodes2d = grid.Nodes2D;
+            Node_v1[,] nodes2d = grid.Nodes2D;
 
             for (int iRow = 0; iRow < nodes2d.GetLength(0); iRow++)
             {
@@ -31,9 +31,9 @@ namespace PathFindingDotnetCore.Models
             }
         }
 
-        private void PopulateEdges(Grid grid)
+        private void PopulateEdges(Grid_v1 grid)
         {
-            Node[,] nodes2d = grid.Nodes2D;
+            Node_v1[,] nodes2d = grid.Nodes2D;
             int nRows = nodes2d.GetLength(0);
             int nCols = nodes2d.GetLength(1);
 
@@ -41,37 +41,37 @@ namespace PathFindingDotnetCore.Models
             {
                 for (int iCol = 0; iCol < nCols; iCol++)
                 {
-                    Node currentNode = nodes2d[iRow, iCol];
+                    Node_v1 currentNode = nodes2d[iRow, iCol];
                     if (!currentNode.IsWall)
                         GetEdgesOfNode(iRow, iCol, grid);
                 }
             }
         }
 
-        private void GetEdgesOfNode(int gridRow, int gridCol, Grid grid)
+        private void GetEdgesOfNode(int gridRow, int gridCol, Grid_v1 grid)
         {
-            Node[,] nodes2d = grid.Nodes2D;
-            Node currentNode = nodes2d[gridRow, gridCol];
+            Node_v1[,] nodes2d = grid.Nodes2D;
+            Node_v1 currentNode = nodes2d[gridRow, gridCol];
 
             // if has right non-wall neighbour
             if (gridCol < nodes2d.GetLength(1) - 1 && !nodes2d[gridRow, gridCol + 1].IsWall)
             {
-                Node rightNeighbour = nodes2d[gridRow, gridCol + 1];
+                Node_v1 rightNeighbour = nodes2d[gridRow, gridCol + 1];
                 AddEdgeWithWeight1(currentNode, rightNeighbour);
             }
             // if has below non-wall neighbour
             if (gridRow < nodes2d.GetLength(0) - 1 && !nodes2d[gridRow + 1, gridCol].IsWall)
             {
-                Node belowNeighbour = nodes2d[gridRow + 1, gridCol];
+                Node_v1 belowNeighbour = nodes2d[gridRow + 1, gridCol];
                 AddEdgeWithWeight1(currentNode, belowNeighbour);
             }
             // bidirectional edges, so above and left aren't needed
         }
 
-        private void AddEdgeWithWeight1(Node currentNode, Node neighbour)
+        private void AddEdgeWithWeight1(Node_v1 currentNode, Node_v1 neighbour)
         {
-            Edges.Add(new Edge(currentNode.Id, neighbour.Id, 1));
-            Edges.Add(new Edge(neighbour.Id, currentNode.Id, 1)); // bidirectional edge        
+            Edges.Add(new Edge_v1(currentNode.Id, neighbour.Id, 1));
+            Edges.Add(new Edge_v1(neighbour.Id, currentNode.Id, 1)); // bidirectional edge        
         }
 
         public int GetSourceId()

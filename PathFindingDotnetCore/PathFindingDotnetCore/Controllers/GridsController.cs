@@ -21,7 +21,7 @@ namespace PathFindingDotnetCore.Controllers
 
         // GET grids
         [HttpGet]
-        public IEnumerable<Grid> Get()
+        public IEnumerable<Grid_v1> Get()
         {
             return gridService.GetAll();
         }
@@ -35,7 +35,7 @@ namespace PathFindingDotnetCore.Controllers
 
         // POST grids
         [HttpPost]
-        public IActionResult Post([FromBody] Grid grid)
+        public IActionResult Post([FromBody] Grid_v1 grid)
         {
             return CreatedAtAction("Get", new { id = grid.Id }, gridService.Create(grid));
         }
@@ -43,7 +43,7 @@ namespace PathFindingDotnetCore.Controllers
         // PUT grids/5
         [HttpPut("{id}")]
 #pragma warning disable IDE0060 // Remove unused parameter
-        public IActionResult Put(Guid id, [FromBody] Grid grid)
+        public IActionResult Put(Guid id, [FromBody] Grid_v1 grid)
 #pragma warning restore IDE0060 // Remove unused parameter
         {
             throw new NotImplementedException();

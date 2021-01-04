@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PathFindingDotnetCore.Models
 {
-    public class Node : INode
+    public class Node_v1
     {
         private bool _isStart;
         private int _distanceToSrc;
@@ -21,7 +21,7 @@ namespace PathFindingDotnetCore.Models
         public int ParentId { get; set; }
         public int DistanceToSrc { get { return _distanceToSrc; } set { if(!IsStart) _distanceToSrc = value; } }
 
-        public Node(int id = -1, bool isStart = false, bool isFinish = false, bool isWall = false)
+        public Node_v1(int id = -1, bool isStart = false, bool isFinish = false, bool isWall = false)
         {
             Id = id == -1 ? new Random().Next() : id;
             IsStart = isStart;

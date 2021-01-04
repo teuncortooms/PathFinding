@@ -2,18 +2,18 @@
 
 namespace PathFindingDotnetCore.Algorithms.Dijkstra
 {
-    public class NewDijkstraReport
+    public class DijkstraReport_v1
     {
         public List<int> VisitedInOrder { get; }
         public List<int> ShortestPathToDest { get; }
 
-        public NewDijkstraReport()
+        public DijkstraReport_v1()
         {
             VisitedInOrder = new List<int>();
             ShortestPathToDest = new List<int>();
         }
         
-        public NewDijkstraReport(List<int> visitedInOrder, List<int> shortestPathToDest)
+        public DijkstraReport_v1(List<int> visitedInOrder, List<int> shortestPathToDest)
         {
             VisitedInOrder = visitedInOrder;
             ShortestPathToDest = shortestPathToDest;

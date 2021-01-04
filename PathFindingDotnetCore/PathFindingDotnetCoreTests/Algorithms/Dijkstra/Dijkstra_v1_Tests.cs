@@ -10,34 +10,27 @@ using System.Text.Json;
 namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
 {
     [TestClass()]
-    public class NewDijkstraTests
+    public class Dijkstra_v1_Tests
     {
         [TestMethod()]
-        [DataRow(3, 3, 0, 0)]
-        [DataRow(5, 5, 1, 1)]
-        public void GetReport_returns_shortest_path_from_src_to_dest(int nRows, int nCols, int row, int srcCol)
+        public void GetReport_returns_shortest_path_from_src_to_dest()
         {
-            int destCol = nCols - 2;
-
             // Set up component test
-            BetterGrid grid = new BetterGrid(nRows, nCols);
-            grid.SetStart(row, srcCol);
-            grid.SetFinish(row, destCol);
-            BetterGraph graph = new BetterGraph(grid);
+            Grid_v1 grid = new Grid_v1(3, 3);
+            grid.SetStart(0, 0);
+            grid.SetFinish(0, 2);
+            Graph_v1 graph = new Graph_v1(grid);
 
-            List<int> expected = new List<int>();
-            for (int iCol = srcCol; iCol <= destCol; iCol++)
-            {
-                expected.Add(grid.Nodes2D[row, iCol].Id);
-            }
+            int[] expected = { grid.Nodes2D[0, 0].Id, grid.Nodes2D[0, 1].Id, grid.Nodes2D[0, 2].Id };
 
             // Act
-            NewDijkstraAnalysis newDijkstra = new NewDijkstraAnalysis(graph);
+            DijkstraAnalysis_v1 dijkstra = new DijkstraAnalysis_v1();
+            dijkstra.AnalyseAndUpdate(graph);
 
             // Assert
-            List<int> actual = newDijkstra.Report.ShortestPathToDest;
+            List<int> actual = dijkstra.Report.ShortestPathToDest;
             CollectionAssert.AreEqual(actual, expected);
-            Debug.WriteLine(newDijkstra.Report);
+            Debug.WriteLine(dijkstra.Report);
         }
 
         [TestMethod()]
@@ -49,14 +42,37 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
             {
                 PropertyNameCaseInsensitive = true
             });
-            BetterGrid grid = input.ConvertToBetterGrid();
-            BetterGraph graph = new BetterGraph(grid);
+            Grid_v1 grid = input.ConvertToGrid();
+            Graph_v1 graph = new Graph_v1(grid);
 
             // Act
-            NewDijkstraAnalysis newDijkstra = new NewDijkstraAnalysis(graph);
+            DijkstraAnalysis_v1 dijkstra = new DijkstraAnalysis_v1();
+            dijkstra.AnalyseAndUpdate(graph);
 
             // Print
-            Debug.WriteLine(newDijkstra.Report.ShortestPathToDest);
+            Debug.WriteLine(dijkstra.Report.ShortestPathToDest);
         }
+
+        //[TestMethod()]
+        //public void Prop_Parents_has_parent_of_every_vertex_when_initialised()
+        //{
+        //    Dijkstra d = new DijkstraAnalysis(graph, 0, 7);
+
+        //    int[] actual = d.Parents;
+        //    int[] expected = new int[] { -1, 0, 1, 2, 5, 6, 7, 0, 2 };
+
+        //    CollectionAssert.AreEqual(actual, expected);
+        //}
+
+        //[TestMethod()]
+        //public void Prop_ShortestPathToDest_has_shortest_path_from_src_to_dest_when_initialised()
+        //{
+        //    Dijkstra d = new DijkstraAnalysis(graph, 0, 7);
+
+        //    int[] actual = d.ShortestPathToDest;
+        //    int[] expected = new int[] { 0, 7 };
+
+        //    CollectionAssert.AreEqual(actual, expected);
+        //}
     }
 }

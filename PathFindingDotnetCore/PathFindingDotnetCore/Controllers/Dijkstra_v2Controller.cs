@@ -11,9 +11,8 @@ namespace PathFindingDotnetCore.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DijkstraController : Controller
+    public class Dijkstra_v2Controller : Controller
     {
-        // GET dijkstra/example
         [HttpGet("example")]
         public DijkstraReport Example()
         {
@@ -23,23 +22,18 @@ namespace PathFindingDotnetCore.Controllers
 
             Graph graph = new Graph(grid);
 
-            Dijkstra dijkstra = new Dijkstra();
-            dijkstra.AnalyseAndUpdate(graph);
-
-            return dijkstra.Report;
+            DijkstraAnalysis newDijkstra = new DijkstraAnalysis(graph);
+            return newDijkstra.Report;
         }
 
-        // POST dijkstra
         [HttpPost("analyse")]
         public DijkstraReport Analyse([FromBody] GridVM input)
         {
-            Grid grid = input.ConvertToGrid();
+            Grid grid = input.ConvertToBetterGrid();
             Graph graph = new Graph(grid);
 
-            Dijkstra dijkstra = new Dijkstra();
-            dijkstra.AnalyseAndUpdate(graph);
-
-            return dijkstra.Report;
+            DijkstraAnalysis newDijkstra = new DijkstraAnalysis(graph);
+            return newDijkstra.Report;
         }
     }
 }

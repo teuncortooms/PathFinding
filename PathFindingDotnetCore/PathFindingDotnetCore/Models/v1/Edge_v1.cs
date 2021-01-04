@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace PathFindingDotnetCore.Models
 {
-    public class Edge
+    public class Edge_v1
     {
         public int FromId { get; }
         public int ToId { get; }
         public int Weight { get; }
 
-        public Edge(int fromId, int toId, int weight)
+        public Edge_v1(int fromId, int toId, int weight)
         {
             FromId = fromId;
             ToId = toId;
