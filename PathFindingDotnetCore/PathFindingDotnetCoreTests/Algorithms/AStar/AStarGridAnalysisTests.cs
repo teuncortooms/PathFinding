@@ -10,27 +10,33 @@ using System.Text.Json;
 namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
 {
     [TestClass()]
-    public class DijkstraComponentTests
+    public class AStarGridAnalysisTests
     {
         [TestMethod()]
-        public void GetReport_returns_shortest_path_from_src_to_dest()
+        [DataRow(3, 3, 0, 0)]
+        [DataRow(5, 5, 1, 1)]
+        public void GetReport_returns_shortest_path_from_src_to_dest(int nRows, int nCols, int row, int srcCol)
         {
-            // Set up component test
-            Grid grid = new Grid(3, 3);
-            grid.SetStart(0, 0);
-            grid.SetFinish(0, 2);
-            Graph graph = new Graph(grid);
+            int destCol = nCols - 2;
 
-            int[] expected = { grid.Nodes2D[0, 0].Id, grid.Nodes2D[0, 1].Id, grid.Nodes2D[0, 2].Id };
+            // Set up component test
+            Grid grid = new Grid(nRows, nCols);
+            grid.SetStart(row, srcCol);
+            grid.SetFinish(row, destCol);
+
+            List<int> expected = new List<int>();
+            for (int iCol = srcCol; iCol <= destCol; iCol++)
+            {
+                expected.Add(grid.Cells[row, iCol].Id);
+            }
 
             // Act
-            Dijkstra dijkstra = new Dijkstra();
-            dijkstra.AnalyseAndUpdate(graph);
+            AStarGridAnalysis aStar = new AStarGridAnalysis(grid);
 
             // Assert
-            List<int> actual = dijkstra.Report.ShortestPathToDest;
+            List<int> actual = aStar.Report.ShortestPathToDest;
             CollectionAssert.AreEqual(actual, expected);
-            Debug.WriteLine(dijkstra.Report);
+            Debug.WriteLine(aStar.Report);
         }
 
         [TestMethod()]
@@ -43,36 +49,12 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
                 PropertyNameCaseInsensitive = true
             });
             Grid grid = input.ConvertToGrid();
-            Graph graph = new Graph(grid);
 
             // Act
-            Dijkstra dijkstra = new Dijkstra();
-            dijkstra.AnalyseAndUpdate(graph);
+            AStarGridAnalysis aStar = new AStarGridAnalysis(grid);
 
             // Print
-            Debug.WriteLine(dijkstra.Report.ShortestPathToDest);
+            Debug.WriteLine(aStar.Report.ShortestPathToDest);
         }
-
-        //[TestMethod()]
-        //public void Prop_Parents_has_parent_of_every_vertex_when_initialised()
-        //{
-        //    Dijkstra d = new DijkstraAnalysis(graph, 0, 7);
-
-        //    int[] actual = d.Parents;
-        //    int[] expected = new int[] { -1, 0, 1, 2, 5, 6, 7, 0, 2 };
-
-        //    CollectionAssert.AreEqual(actual, expected);
-        //}
-
-        //[TestMethod()]
-        //public void Prop_ShortestPathToDest_has_shortest_path_from_src_to_dest_when_initialised()
-        //{
-        //    Dijkstra d = new DijkstraAnalysis(graph, 0, 7);
-
-        //    int[] actual = d.ShortestPathToDest;
-        //    int[] expected = new int[] { 0, 7 };
-
-        //    CollectionAssert.AreEqual(actual, expected);
-        //}
     }
 }

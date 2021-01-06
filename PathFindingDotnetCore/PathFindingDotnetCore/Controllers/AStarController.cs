@@ -11,35 +11,26 @@ namespace PathFindingDotnetCore.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class DijkstraController : Controller
+    public class AStarController : Controller
     {
-        // GET dijkstra/example
         [HttpGet("example")]
-        public DijkstraReport Example()
+        public AStarReport Example()
         {
             Grid grid = new Grid(5, 5);
             grid.SetStart(2, 1);
             grid.SetFinish(3, 4);
 
-            Graph graph = new Graph(grid);
-
-            Dijkstra dijkstra = new Dijkstra();
-            dijkstra.AnalyseAndUpdate(graph);
-
-            return dijkstra.Report;
+            AStarGridAnalysis aStar = new AStarGridAnalysis(grid);
+            return aStar.Report;
         }
 
-        // POST dijkstra
         [HttpPost("analyse")]
-        public DijkstraReport Analyse([FromBody] GridVM input)
+        public AStarReport Analyse([FromBody] GridVM input)
         {
             Grid grid = input.ConvertToGrid();
-            Graph graph = new Graph(grid);
 
-            Dijkstra dijkstra = new Dijkstra();
-            dijkstra.AnalyseAndUpdate(graph);
-
-            return dijkstra.Report;
+            AStarGridAnalysis aStar = new AStarGridAnalysis(grid);
+            return aStar.Report;
         }
     }
 }

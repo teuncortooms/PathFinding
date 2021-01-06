@@ -8,54 +8,54 @@ namespace PathFindingDotnetCore.Models
     public class Grid
     {
         public Guid Id { get; }
-        public Node[,] Nodes2D { get; }
+        public Cell[,] Cells { get; }
 
-        public Grid(Node[,] nodes)
+        public Grid(Cell[,] cells)
         {
             Id = Guid.NewGuid();
-            Nodes2D = nodes;
+            Cells = cells;
         }
-        
+
         public Grid(int rows, int cols)
         {
             Id = Guid.NewGuid();
-            Nodes2D = new Node[rows, cols];
-            BuildNodes(rows, cols);
+            Cells = new Cell[rows, cols];
+            BuildCells(rows, cols);
         }
 
-        private void BuildNodes(int rows, int cols)
+        private void BuildCells(int rows, int cols)
         {
             for (int row = 0; row < rows; row++)
             {
                 for (int col = 0; col < cols; col++)
                 {
-                    Nodes2D[row, col] = new Node();
+                    Cells[row, col] = new Cell(row, col);
                 }
             }
         }
 
         public void SetStart(int row, int col)
         {
-            Node oldStart = GetNode(node => node.IsStart);
+            Cell oldStart = GetCell(cell => cell.IsStart);
             if (oldStart != null) oldStart.IsStart = false;
-            Nodes2D[row, col].IsStart = true;
+            Cells[row, col].IsStart = true;
         }
 
         public void SetFinish(int row, int col)
         {
-            Node oldFinish = GetNode(node => node.IsFinish);
+            Cell oldFinish = GetCell(cell => cell.IsFinish);
             if (oldFinish != null) oldFinish.IsFinish = false;
-            Nodes2D[row, col].IsFinish = true;
+            Cells[row, col].IsFinish = true;
         }
 
-        private delegate bool IsRequestedNode(Node node);
-        private Node GetNode(IsRequestedNode isRequest)
+        private delegate bool IsRequestedCell(Cell cell);
+        private Cell GetCell(IsRequestedCell isRequest)
         {
-            for (int iRow = 0; iRow < Nodes2D.GetLength(0); iRow++)
+            for (int iRow = 0; iRow < Cells.GetLength(0); iRow++)
             {
-                for (int iCol = 0; iCol < Nodes2D.GetLength(1); iCol++)
+                for (int iCol = 0; iCol < Cells.GetLength(1); iCol++)
                 {
-                    if (isRequest(Nodes2D[iRow, iCol])) return Nodes2D[iRow, iCol];
+                    if (isRequest(Cells[iRow, iCol])) return Cells[iRow, iCol];
                 }
             }
             return null;
@@ -63,9 +63,9 @@ namespace PathFindingDotnetCore.Models
 
         public bool ToggleWall(int row, int col)
         {
-            Node node = Nodes2D[row, col];
-            node.IsWall = !node.IsWall;
-            return node.IsWall;
+            Cell cell = Cells[row, col];
+            cell.IsWall = !cell.IsWall;
+            return cell.IsWall;
         }
     }
 }
