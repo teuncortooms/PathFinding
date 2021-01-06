@@ -16,7 +16,7 @@ namespace PathFindingDotnetCore.Models.Tests
             {
                 PropertyNameCaseInsensitive = true
             });
-            Grid_v1 grid = input.ConvertToGrid();
+            Grid_v1 grid = input.ConvertToGrid_v1();
             Graph_v1 graph = new Graph_v1(grid);
             Debug.WriteLine(graph);
         }

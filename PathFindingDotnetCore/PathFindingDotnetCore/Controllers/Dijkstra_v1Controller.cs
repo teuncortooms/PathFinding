@@ -33,7 +33,7 @@ namespace PathFindingDotnetCore.Controllers
         [HttpPost("analyse")]
         public DijkstraReport_v1 Analyse([FromBody] GridVM input)
         {
-            Grid_v1 grid = input.ConvertToGrid();
+            Grid_v1 grid = input.ConvertToGrid_v1();
             Graph_v1 graph = new Graph_v1(grid);
 
             DijkstraAnalysis_v1 dijkstra = new DijkstraAnalysis_v1();

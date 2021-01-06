@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace PathFindingDotnetCore.Algorithms.Dijkstra
 {
-    public class DijkstraAnalysis
+    public class DijkstraGraphAnalysis
     {
         private readonly Graph graph;
         private readonly int[] distanceToSrc;
@@ -14,7 +14,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 
         public DijkstraReport Report { get; }
 
-        public DijkstraAnalysis(Graph graph)
+        public DijkstraGraphAnalysis(Graph graph)
         {
             this.graph = graph;
             int n = graph.NodeDetails.Length;

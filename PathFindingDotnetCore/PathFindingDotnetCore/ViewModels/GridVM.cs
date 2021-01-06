@@ -9,7 +9,7 @@ namespace PathFindingDotnetCore.Models
     {
         public List<List<NodeVM>> Nodes { get; set; } // List for Swagger
 
-        public Grid_v1 ConvertToGrid()
+        public Grid_v1 ConvertToGrid_v1()
         {
             int nRows = Nodes.Count();
             int nCols = Nodes[0].Count();

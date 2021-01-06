@@ -32,7 +32,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
             }
 
             // Act
-            DijkstraAnalysis newDijkstra = new DijkstraAnalysis(graph);
+            DijkstraGraphAnalysis newDijkstra = new DijkstraGraphAnalysis(graph);
 
             // Assert
             List<int> actual = newDijkstra.Report.ShortestPathToDest;
@@ -53,7 +53,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
             Graph graph = new Graph(grid);
 
             // Act
-            DijkstraAnalysis newDijkstra = new DijkstraAnalysis(graph);
+            DijkstraGraphAnalysis newDijkstra = new DijkstraGraphAnalysis(graph);
 
             // Print
             Debug.WriteLine(newDijkstra.Report.ShortestPathToDest);
