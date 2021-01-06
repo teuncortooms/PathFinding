@@ -29,7 +29,7 @@ namespace PathFindingDotnetCore.Controllers
         [HttpPost("analyse")]
         public DijkstraReport Analyse([FromBody] GridVM input)
         {
-            Grid grid = input.ConvertToBetterGrid();
+            Grid grid = input.ConvertToGrid();
             Graph graph = new Graph(grid);
 
             DijkstraGraphAnalysis newDijkstra = new DijkstraGraphAnalysis(graph);

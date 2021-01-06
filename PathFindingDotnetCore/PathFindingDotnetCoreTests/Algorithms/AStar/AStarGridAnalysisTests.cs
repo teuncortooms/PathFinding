@@ -10,7 +10,7 @@ using System.Text.Json;
 namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
 {
     [TestClass()]
-    public class Dijkstra_v2_Tests
+    public class AStarGridAnalysisTests
     {
         [TestMethod()]
         [DataRow(3, 3, 0, 0)]
@@ -23,7 +23,6 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
             Grid grid = new Grid(nRows, nCols);
             grid.SetStart(row, srcCol);
             grid.SetFinish(row, destCol);
-            Graph graph = new Graph(grid);
 
             List<int> expected = new List<int>();
             for (int iCol = srcCol; iCol <= destCol; iCol++)
@@ -32,12 +31,12 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
             }
 
             // Act
-            DijkstraGraphAnalysis newDijkstra = new DijkstraGraphAnalysis(graph);
+            AStarGridAnalysis aStar = new AStarGridAnalysis(grid);
 
             // Assert
-            List<int> actual = newDijkstra.Report.ShortestPathToDest;
+            List<int> actual = aStar.Report.ShortestPathToDest;
             CollectionAssert.AreEqual(actual, expected);
-            Debug.WriteLine(newDijkstra.Report);
+            Debug.WriteLine(aStar.Report);
         }
 
         [TestMethod()]
@@ -50,13 +49,12 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra.Tests
                 PropertyNameCaseInsensitive = true
             });
             Grid grid = input.ConvertToGrid();
-            Graph graph = new Graph(grid);
 
             // Act
-            DijkstraGraphAnalysis newDijkstra = new DijkstraGraphAnalysis(graph);
+            AStarGridAnalysis aStar = new AStarGridAnalysis(grid);
 
             // Print
-            Debug.WriteLine(newDijkstra.Report.ShortestPathToDest);
+            Debug.WriteLine(aStar.Report.ShortestPathToDest);
         }
     }
 }

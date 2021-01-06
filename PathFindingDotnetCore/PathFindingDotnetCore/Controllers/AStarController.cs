@@ -27,7 +27,7 @@ namespace PathFindingDotnetCore.Controllers
         [HttpPost("analyse")]
         public AStarReport Analyse([FromBody] GridVM input)
         {
-            Grid grid = input.ConvertToBetterGrid();
+            Grid grid = input.ConvertToGrid();
 
             AStarGridAnalysis aStar = new AStarGridAnalysis(grid);
             return aStar.Report;

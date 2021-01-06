@@ -12,7 +12,7 @@ namespace PathFindingDotnetCore.Models
 
         public Graph(Grid grid)
         {
-            int n = grid.Nodes2D.Length;
+            int n = grid.Cells.Length;
             NodeDetails = new Node[n];
             EdgeMatrix = new int[n, n];
             for (int matrixRow = 0; matrixRow < n; matrixRow++)
@@ -25,7 +25,7 @@ namespace PathFindingDotnetCore.Models
 
         private void PopulateNodes(Grid grid)
         {
-            Node[,] nodes2d = grid.Nodes2D;
+            Node[,] nodes2d = grid.Cells;
 
             int iNode = 0;
             for (int iRow = 0; iRow < nodes2d.GetLength(0); iRow++)
@@ -40,7 +40,7 @@ namespace PathFindingDotnetCore.Models
 
         private void PopulateEdges(Grid grid)
         {
-            Node[,] nodes2d = grid.Nodes2D;
+            Node[,] nodes2d = grid.Cells;
             int nRows = nodes2d.GetLength(0);
             int nCols = nodes2d.GetLength(1);
             
@@ -59,9 +59,9 @@ namespace PathFindingDotnetCore.Models
 
         private void AddEdgesOfNode(int iNode, int iRow, int iCol, Grid grid)
         {
-            if (this.NodeDetails[iNode] != grid.Nodes2D[iRow, iCol]) throw new Exception("Node index error!");
+            if (this.NodeDetails[iNode] != grid.Cells[iRow, iCol]) throw new Exception("Node index error!");
 
-            Node[,] nodes2d = grid.Nodes2D;
+            Node[,] nodes2d = grid.Cells;
             int nRow = nodes2d.GetLength(0); 
             int nCol = nodes2d.GetLength(1);
 

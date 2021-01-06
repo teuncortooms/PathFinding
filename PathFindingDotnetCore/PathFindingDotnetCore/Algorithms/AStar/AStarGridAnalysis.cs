@@ -46,7 +46,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
             int nCells = cells.Length;
             for (int i = 0; i < nCells - 1; i++)
             {
-                var cell = GetClosest(); // equals src in first iteration. 
+                var cell = GetNext(); // equals src in first iteration. 
                 if (cell.Sum == int.MaxValue) break; // no more paths from src
                 cell.IsClosed = true;
                 Report.VisitedInOrder.Add(cell.Id);
@@ -83,24 +83,24 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
             return null;
         }
 
-        private CellWithAStarDetails GetClosest()
+        private CellWithAStarDetails GetNext()
         {
-            double minDistance = int.MaxValue;
-            CellWithAStarDetails closestCell = null;
+            double lowestSum = double.MaxValue;
+            CellWithAStarDetails potentialNext = null;
 
-            for (int iRow = 0; iRow < nRows; iRow++)
+            for (int row = 0; row < nRows; row++)
             {
-                for (int iCol = 0; iCol < nCols; iCol++)
+                for (int col = 0; col < nCols; col++)
                 {
-                    var cell = cells[iRow, iCol];
-                    if (!cell.IsClosed && cell.DistanceToSrc <= minDistance)
+                    var cell = cells[row, col];
+                    if (!cell.IsClosed && cell.Sum <= lowestSum)
                     {
-                        minDistance = cell.DistanceToSrc;
-                        closestCell = cell;
+                        lowestSum = cell.Sum;
+                        potentialNext = cell;
                     }
                 }
             }
-            return closestCell;
+            return potentialNext;
         }
 
         private void UpdateNeighbours(CellWithAStarDetails currentCell, CellWithAStarDetails dest)
@@ -109,10 +109,11 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 
             foreach (var neighbour in neighbours)
             {
-                if (neighbour.IsClosed && IsLowerSum(currentCell, neighbour))
+                if (!neighbour.IsClosed && IsLowerSum(currentCell, neighbour))
                 {
                     neighbour.DistanceToSrc = currentCell.DistanceToSrc + 1;
                     neighbour.EstimateToDest = GetManhattan(neighbour, dest);
+                    neighbour.Parent = currentCell;
                 }
                 if (neighbour.IsClosed && IsLowerSum(currentCell, neighbour))
                 {

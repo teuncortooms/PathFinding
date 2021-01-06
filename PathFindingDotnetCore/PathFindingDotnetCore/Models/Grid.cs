@@ -29,9 +29,7 @@ namespace PathFindingDotnetCore.Models
             {
                 for (int col = 0; col < cols; col++)
                 {
-                    int x = col - 1;
-                    int y = row - 1;
-                    Cells[row, col] = new Cell(y, x);
+                    Cells[row, col] = new Cell(row, col);
                 }
             }
         }

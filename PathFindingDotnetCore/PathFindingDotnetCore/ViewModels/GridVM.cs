@@ -28,23 +28,23 @@ namespace PathFindingDotnetCore.Models
             return new Grid_v1(nodes);
         }
 
-        public Grid ConvertToBetterGrid() // not using template method to avoid factories for now
+        public Grid ConvertToGrid() // not using template method to avoid factories for now
         {
             int nRows = Nodes.Count();
             int nCols = Nodes[0].Count();
-            Node[,] nodes = new Node[nRows, nCols];
-            for (int iRow = 0; iRow < nRows; iRow++)
+            var cells = new Cell[nRows, nCols];
+            for (int row = 0; row < nRows; row++)
             {
-                for (int iCol = 0; iCol < nCols; iCol++)
+                for (int col = 0; col < nCols; col++)
                 {
-                    int id = Nodes[iRow][iCol].Id;
-                    bool isStart = Nodes[iRow][iCol].IsStart;
-                    bool isFinish = Nodes[iRow][iCol].IsFinish;
-                    bool isWall = Nodes[iRow][iCol].IsWall;
-                    nodes[iRow, iCol] = new Node(id, isStart, isFinish, isWall);
+                    int id = Nodes[row][col].Id;
+                    bool isStart = Nodes[row][col].IsStart;
+                    bool isFinish = Nodes[row][col].IsFinish;
+                    bool isWall = Nodes[row][col].IsWall;
+                    cells[row, col] = new Cell(row, col, id, isStart, isFinish, isWall);
                 }
             }
-            return new Grid(nodes);
+            return new Grid(cells);
         }
     }
 }

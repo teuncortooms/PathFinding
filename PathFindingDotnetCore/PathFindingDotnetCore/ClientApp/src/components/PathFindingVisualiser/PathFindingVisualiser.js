@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 import Node from "./Node/Node.js";
-import { DIJKSTRA_API_URL } from "../../constants";
+import * as urls from "../../constants";
 import { dijkstraAnalyse, getDijkstraReport } from "../../algorithms/dijkstra.js"
 import "./PathFindingVisualiser.css";
 
@@ -97,17 +97,23 @@ class PathFindingVisualiser extends Component {
         return (
             <div>
                 <Form inline>
-                    <Button className="m-1" onClick={() => this.startJSDijkstra()}>
+                    <Button className="m-1" color="info" onClick={() => this.startJSDijkstra()}>
                         Dijkstra JS
                     </Button>
-                    <Button className="m-1" onClick={() => this.startAPIDijkstra_v1()}>
+                    <Button className="m-1" color="info" onClick={() => this.startAPIDijkstra_v1()}>
                         Dijkstra API v1
                     </Button>
-                    <Button className="m-1" onClick={() => this.startAPIDijkstra_v2()}>
+                    <Button className="m-1" color="info" onClick={() => this.startAPIDijkstra_v2()}>
                         Dijkstra API v2
                     </Button>
-                    <Button className="m-1" onClick={() => this.reset()}>
-                        Reset
+                    <Button className="m-1" color="success" onClick={() => this.startAPIAStar()}>
+                        A* API
+                    </Button>
+                    <Button className="m-1" onClick={() => this.resetAnalysis()}>
+                        Clear Analysis
+                    </Button>
+                    <Button className="m-1" onClick={() => this.resetAll()}>
+                        Reset All
                     </Button>
                     <FormGroup className="m-1">
                         <Label for="speed">Speed:</Label>
@@ -158,15 +164,19 @@ class PathFindingVisualiser extends Component {
         const finishNode = grid[this.FINISH_NODE_ROW][this.FINISH_NODE_COL];
         const visitedNodesInOrder = dijkstraAnalyse(grid, startNode, finishNode);
         const dijkstraReport = getDijkstraReport(visitedNodesInOrder);
-        this.animateDijkstra(dijkstraReport);
+        this.animateAnalysis(dijkstraReport);
     }
 
     startAPIDijkstra_v1() {
-        this.startAPIAnalysis('https://localhost:44373/Dijkstra_v1/analyse');
+        this.startAPIAnalysis(urls.DIJKSTRA_V1_API_URL);
     }
 
     startAPIDijkstra_v2() {
-        this.startAPIAnalysis('https://localhost:44373/Dijkstra_v2/analyse');
+        this.startAPIAnalysis(urls.DIJKSTRA_V2_API_URL);
+    }
+
+    startAPIAStar() {
+        this.startAPIAnalysis(urls.ASTAR_API_URL);
     }
 
     startAPIAnalysis(API_URL) {
@@ -183,7 +193,7 @@ class PathFindingVisualiser extends Component {
             })
         })
             .then(result => result.json())
-            .then(dijkstraReport => this.animateDijkstra(dijkstraReport))
+            .then(dijkstraReport => this.animateAnalysis(dijkstraReport))
             .catch(err => console.log(err));
     }
 
@@ -206,7 +216,9 @@ class PathFindingVisualiser extends Component {
         return apiData;
     }
 
-    animateDijkstra(dijkstraReport) {
+    animateAnalysis(dijkstraReport) {
+        this.resetAnalysis();
+
         console.log(dijkstraReport);
         const visitedNodesInOrder = dijkstraReport.visitedInOrder;
         const path = dijkstraReport.shortestPathToDest;
@@ -233,8 +245,8 @@ class PathFindingVisualiser extends Component {
         }
     }
 
-    reset() {
-        const grid = this.getInitialGrid();
+    resetAnalysis() {
+        const grid = this.state.grid;
         for (let iRow = 0; iRow < grid.length; iRow++) { // hack to undo non-react hack above
             let row = grid[iRow];
             for (let iCol = 0; iCol < row.length; iCol++) {
@@ -242,6 +254,11 @@ class PathFindingVisualiser extends Component {
                 document.getElementById(`node-${nodeId}`).classList.remove("node-visited", "node-path");
             }
         }
+    }
+
+    resetAll() {
+        const grid = this.getInitialGrid();
+        this.resetAnalysis();
         this.setState({ grid });
     }
 }
