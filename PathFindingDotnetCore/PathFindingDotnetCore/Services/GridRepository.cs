@@ -8,21 +8,21 @@ namespace PathFindingDotnetCore.Services
 {
     public class GridRepository
     {
-        private static readonly List<Grid_v1> grids = new List<Grid_v1>();
+        private static readonly List<Grid> grids = new List<Grid>();
 
         static GridRepository()
         {
             for (int i = 0; i < 5; i++)
             {
-                Grid_v1 grid = GetRandomGrid(40, 40);
+                Grid grid = GetRandomGrid(40, 40);
                 grids.Add(grid);
             }
         }
 
-        private static Grid_v1 GetRandomGrid(int rows, int cols)
+        private static Grid GetRandomGrid(int rows, int cols)
         {
             Random rnd = new Random();
-            Grid_v1 grid = new Grid_v1(rows, cols);
+            Grid grid = new Grid(rows, cols);
 
             // set walls
             int nWalls = cols * rows / 4;
@@ -32,35 +32,35 @@ namespace PathFindingDotnetCore.Services
             }
 
             // set start
-            Node_v1 startNode = grid.Nodes2D[rnd.Next(rows), rnd.Next(cols)];
+            Node startNode = grid.Cells[rnd.Next(rows), rnd.Next(cols)];
             startNode.IsStart = true;
             startNode.IsWall = false;
 
             // set finish
-            Node_v1 finishNode;
+            Node finishNode;
             do
             {
-                finishNode = grid.Nodes2D[rnd.Next(rows), rnd.Next(cols)];
+                finishNode = grid.Cells[rnd.Next(rows), rnd.Next(cols)];
             } while (finishNode.IsStart);
-            finishNode.IsFinish = true;
+            finishNode.IsDestination = true;
             finishNode.IsWall = false;
 
             return grid;
         }
 
-        public List<Grid_v1> GetAll()
+        public List<Grid> GetAll()
         {
             return grids;
         }
 
-        public Grid_v1 GetById(Guid id)
+        public Grid GetById(Guid id)
         {
             return grids.Where(grid => grid.Id == id).FirstOrDefault();
         }
 
-        public Grid_v1 Create(Grid_v1 input)
+        public Grid Create(Grid input)
         {
-            Grid_v1 newGrid = new Grid_v1(input.Nodes2D);
+            Grid newGrid = new Grid(input.Cells);
             grids.Add(newGrid);
             return newGrid;
         }

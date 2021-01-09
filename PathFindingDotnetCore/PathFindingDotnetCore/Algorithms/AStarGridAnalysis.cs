@@ -12,14 +12,14 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
         private readonly int nCols;
         private readonly AStarCell[,] cells;
 
-        public AStarReport Report { get; }
+        public Report Report { get; }
 
         public AStarGridAnalysis(Grid grid)
         {
             nRows = grid.Cells.GetLength(0);
             nCols = grid.Cells.GetLength(1);
             cells = new AStarCell[nRows, nCols];
-            Report = new AStarReport();
+            Report = new Report();
 
             InitCells(grid.Cells);
             StartAnalysis();
@@ -38,26 +38,26 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 
         private void StartAnalysis()
         {
-            var src = GetSource();
+            var start = GetStart();
             var dest = GetDestination();
-            src.G = 0;
-            src.H = 0;
-            src.F = 0;
+            start.G = 0;
+            start.H = 0;
+            start.F = 0;
 
             int nCells = cells.Length;
             for (int i = 0; i < nCells - 1; i++)
             {
-                var cell = GetNextBest(); // equals src in first iteration. 
+                var cell = GetNextBest(); // equals start in first iteration. 
                 CloseCell(cell);
-                if (cell.G == int.MaxValue) break; // no more paths from src
-                if (cell.IsFinish) break; // finished
+                if (cell.G == int.MaxValue) break; // no more paths from start
+                if (cell.IsDestination) break; // finished
                 UpdateNeighbours(cell, dest);
             }
 
             GetShortestPathToDest(dest);
         }
 
-        private AStarCell GetSource()
+        private AStarCell GetStart()
         {
             for (int row = 0; row < nRows; row++)
             {
@@ -77,7 +77,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
                 for (int col = 0; col < nCols; col++)
                 {
                     AStarCell cell = cells[row, col];
-                    if (cell.IsFinish) return cell;
+                    if (cell.IsDestination) return cell;
                 }
             }
             return null;

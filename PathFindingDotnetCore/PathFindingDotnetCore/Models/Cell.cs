@@ -19,7 +19,7 @@ namespace PathFindingDotnetCore.Models
 
         public Node ConvertToNode()
         {
-            return new Node(Id, IsStart, IsFinish, IsWall);
+            return new Node(Id, IsStart, IsDestination, IsWall);
         }
     }
 }

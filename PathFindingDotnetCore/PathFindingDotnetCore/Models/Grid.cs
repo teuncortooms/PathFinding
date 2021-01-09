@@ -43,9 +43,9 @@ namespace PathFindingDotnetCore.Models
 
         public void SetFinish(int row, int col)
         {
-            Cell oldFinish = GetCell(cell => cell.IsFinish);
-            if (oldFinish != null) oldFinish.IsFinish = false;
-            Cells[row, col].IsFinish = true;
+            Cell oldFinish = GetCell(cell => cell.IsDestination);
+            if (oldFinish != null) oldFinish.IsDestination = false;
+            Cells[row, col].IsDestination = true;
         }
 
         private delegate bool IsRequestedCell(Cell cell);

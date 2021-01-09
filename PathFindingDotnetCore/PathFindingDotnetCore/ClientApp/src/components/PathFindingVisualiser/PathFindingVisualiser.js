@@ -172,7 +172,7 @@ class PathFindingVisualiser extends Component {
     }
 
     startAPIDijkstra_v2() {
-        this.startAPIAnalysis(urls.DIJKSTRA_V2_API_URL);
+        this.startAPIAnalysis(urls.DIJKSTRA_API_URL);
     }
 
     startAPIAStar() {

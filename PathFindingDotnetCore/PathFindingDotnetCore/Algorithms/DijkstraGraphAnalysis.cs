@@ -12,7 +12,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
         private readonly bool[] isVisited;
         private readonly int[] parents;
 
-        public DijkstraReport Report { get; }
+        public Report Report { get; }
 
         public DijkstraGraphAnalysis(Graph graph)
         {
@@ -28,9 +28,9 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
                 parents[i] = -1;
             }
 
-            Report = new DijkstraReport();
+            Report = new Report();
 
-            int iSrc = graph.GetSourceIdx();
+            int iSrc = graph.GetStartIdx();
             int iDest = graph.GetDestinationIdx();
             StartAnalysis(iSrc, iDest);
         }
@@ -46,7 +46,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
                 if (distanceToSrc[Idx] == int.MaxValue) break; // no more paths from src
                 isVisited[Idx] = true;
                 Report.VisitedInOrder.Add(graph.NodeDetails[Idx].Id);
-                if (graph.NodeDetails[Idx].IsFinish) break; // finished
+                if (graph.NodeDetails[Idx].IsDestination) break; // finished
                 UpdateNeighbours(Idx);
             }
 

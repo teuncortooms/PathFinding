@@ -15,7 +15,7 @@ namespace PathFindingDotnetCore.Models.v3
         public AStarCell Parent { get; set; }
 
         public AStarCell(Cell cell)
-            : base(cell.Row, cell.Col, cell.Id, cell.IsStart, cell.IsFinish, cell.IsWall)
+            : base(cell.Row, cell.Col, cell.Id, cell.IsStart, cell.IsDestination, cell.IsWall)
         {
             F = double.MaxValue;
             G = double.MaxValue;

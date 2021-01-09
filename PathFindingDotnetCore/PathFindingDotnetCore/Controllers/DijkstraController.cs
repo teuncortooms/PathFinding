@@ -11,10 +11,10 @@ namespace PathFindingDotnetCore.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class Dijkstra_v2Controller : Controller
+    public class DijkstraController : Controller
     {
         [HttpGet("example")]
-        public DijkstraReport Example()
+        public Report Example()
         {
             Grid grid = new Grid(5, 5);
             grid.SetStart(2, 1);
@@ -27,7 +27,7 @@ namespace PathFindingDotnetCore.Controllers
         }
 
         [HttpPost("analyse")]
-        public DijkstraReport Analyse([FromBody] GridVM input)
+        public Report Analyse([FromBody] GridVM input)
         {
             Grid grid = input.ConvertToGrid();
             Graph graph = new Graph(grid);
