@@ -100,11 +100,8 @@ class PathFindingVisualiser extends Component {
                     <Button className="m-1" color="info" onClick={() => this.startJSDijkstra()}>
                         Dijkstra JS
                     </Button>
-                    <Button className="m-1" color="info" onClick={() => this.startAPIDijkstra_v1()}>
-                        Dijkstra API v1
-                    </Button>
-                    <Button className="m-1" color="info" onClick={() => this.startAPIDijkstra_v2()}>
-                        Dijkstra API v2
+                    <Button className="m-1" color="info" onClick={() => this.startAPIDijkstra()}>
+                        Dijkstra API
                     </Button>
                     <Button className="m-1" color="success" onClick={() => this.startAPIAStar()}>
                         A* API
@@ -167,11 +164,7 @@ class PathFindingVisualiser extends Component {
         this.animateAnalysis(dijkstraReport);
     }
 
-    startAPIDijkstra_v1() {
-        this.startAPIAnalysis(urls.DIJKSTRA_V1_API_URL);
-    }
-
-    startAPIDijkstra_v2() {
+    startAPIDijkstra() {
         this.startAPIAnalysis(urls.DIJKSTRA_API_URL);
     }
 

@@ -8,7 +8,7 @@ namespace PathFindingDotnetCore.Models
     public class Grid
     {
         public Guid Id { get; }
-        public Cell[,] Cells { get; }
+        public Cell[,] Cells { get; set; }
 
         public Grid(Cell[,] cells)
         {

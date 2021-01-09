@@ -14,7 +14,7 @@ namespace PathFindingDotnetCore.Services
         {
             for (int i = 0; i < 5; i++)
             {
-                Grid grid = GetRandomGrid(40, 40);
+                Grid grid = GetRandomGrid(20, 40);
                 grids.Add(grid);
             }
         }
@@ -32,18 +32,16 @@ namespace PathFindingDotnetCore.Services
             }
 
             // set start
-            Node startNode = grid.Cells[rnd.Next(rows), rnd.Next(cols)];
-            startNode.IsStart = true;
-            startNode.IsWall = false;
+            Cell start = grid.Cells[rnd.Next(rows), rnd.Next(cols)];
+            start.IsStart = true;
+            start.IsWall = false;
 
             // set finish
-            Node finishNode;
-            do
-            {
-                finishNode = grid.Cells[rnd.Next(rows), rnd.Next(cols)];
-            } while (finishNode.IsStart);
-            finishNode.IsDestination = true;
-            finishNode.IsWall = false;
+            Cell finish;
+            do { finish = grid.Cells[rnd.Next(rows), rnd.Next(cols)]; }
+            while (finish.IsStart);
+            finish.IsDestination = true;
+            finish.IsWall = false;
 
             return grid;
         }
@@ -58,18 +56,18 @@ namespace PathFindingDotnetCore.Services
             return grids.Where(grid => grid.Id == id).FirstOrDefault();
         }
 
-        public Grid Create(Grid input)
+        public bool Add(Grid newGrid)
         {
-            Grid newGrid = new Grid(input.Cells);
             grids.Add(newGrid);
-            return newGrid;
+            return true;
         }
 
-        //public void Update(Guid id, Grid grid)
-        //{
-        //    Grid found = grids.Where(n => n.Id == id).FirstOrDefault();
-        //    found.Nodes2D = grid.Nodes2D;
-        //}
+        public bool Update(Guid id, Grid update)
+        {
+            Grid found = grids.Where(n => n.Id == id).FirstOrDefault();
+            found.Cells = update.Cells;
+            return true;
+        }
 
         public void Delete(Guid id)
         {

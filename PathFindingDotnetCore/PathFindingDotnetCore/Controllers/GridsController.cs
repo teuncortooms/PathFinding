@@ -35,20 +35,19 @@ namespace PathFindingDotnetCore.Controllers
 
         // POST grids
         [HttpPost]
-        public IActionResult Post([FromBody] Grid grid)
+        public IActionResult Post([FromBody] GridVM input)
         {
-            return CreatedAtAction("Get", new { id = grid.Id }, gridService.Create(grid));
+            Grid grid = input.ConvertToGrid();
+            return CreatedAtAction("GET", gridService.Add(grid));
         }
 
         // PUT grids/5
         [HttpPut("{id}")]
-#pragma warning disable IDE0060 // Remove unused parameter
-        public IActionResult Put(Guid id, [FromBody] Grid grid)
-#pragma warning restore IDE0060 // Remove unused parameter
+        public IActionResult Put(Guid id, [FromBody] GridVM input)
         {
-            throw new NotImplementedException();
-            //gridService.Update(id, grid);
-            //return NoContent();
+            Grid newGrid = input.ConvertToGrid();
+            gridService.Update(id, newGrid);
+            return NoContent();
         }
 
         // DELETE grids/5
