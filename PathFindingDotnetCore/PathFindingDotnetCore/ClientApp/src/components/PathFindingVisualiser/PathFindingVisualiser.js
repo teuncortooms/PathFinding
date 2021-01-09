@@ -35,7 +35,7 @@ class PathFindingVisualiser extends Component {
         const grid = [];
         const nRows = this.NUMBER_OF_ROWS;
         const nCols = this.NUMBER_OF_COLUMNS;
-        let id = 0;
+        let id = 1;
         for (let iRow = 0; iRow < nRows; iRow++) {
             const row = [];
             for (let iCol = 0; iCol < nCols; iCol++) {
@@ -181,16 +181,18 @@ class PathFindingVisualiser extends Component {
 
     startAPIAnalysis(API_URL) {
         const apiData = this.mapGridToAPIGrid();
-        console.log(JSON.stringify({ nodes: apiData }));
+        const json = JSON.stringify({
+            nodes: apiData
+        })
+        console.log(json);
+
 
         fetch(API_URL, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                nodes: apiData
-            })
+            body: json
         })
             .then(result => result.json())
             .then(dijkstraReport => this.animateAnalysis(dijkstraReport))
@@ -226,8 +228,11 @@ class PathFindingVisualiser extends Component {
         for (let i = 1; i < visitedNodesInOrder.length - 1; i++) {
             setTimeout(() => {
                 const nodeId = visitedNodesInOrder[i];
-                document.getElementById(`node-${nodeId}`).className = // non-react hack
-                    "node node-visited";
+                if (nodeId > 0)
+                    document.getElementById(`node-${nodeId}`).className = // non-react hack
+                        "node node-visited";
+                if (nodeId < 0)
+                    document.getElementById(`node-${Math.abs(nodeId)}`).classList.remove("node-visited");
             }, 10 / this.state.speed * i);
         }
         setTimeout(() => {
