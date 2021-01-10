@@ -19,7 +19,7 @@ namespace PathFindingDotnetCore.Models.Tests
             {
                 PropertyNameCaseInsensitive = true
             });
-            Grid_v1 grid = input.ConvertToGrid();
+            Grid grid = input.ConvertToGrid();
             Debug.WriteLine(grid);
         }
     }

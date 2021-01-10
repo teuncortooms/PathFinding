@@ -21,9 +21,16 @@ namespace PathFindingDotnetCore.Controllers
 
         // GET grids
         [HttpGet]
-        public IEnumerable<Grid> Get()
+        public IEnumerable<GridVM> Get()
         {
-            return gridService.GetAll();
+            List<Grid> grids = gridService.GetAll();
+            List<GridVM> response = new List<GridVM>();
+            foreach (var grid in grids)
+            {
+                response.Add(new GridVM(grid));
+            }
+
+            return response;
         }
 
         // GET grids/5
@@ -58,9 +65,5 @@ namespace PathFindingDotnetCore.Controllers
             return NoContent();
         }
 
-        public override NoContentResult NoContent()
-        {
-            return base.NoContent();
-        }
     }
 }

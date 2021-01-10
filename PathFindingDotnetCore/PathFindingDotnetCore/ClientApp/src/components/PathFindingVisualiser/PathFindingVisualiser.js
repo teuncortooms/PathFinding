@@ -27,7 +27,8 @@ class PathFindingVisualiser extends Component {
     }
 
     componentDidMount() {
-        const grid = this.getInitialGrid();
+        let { grid } = this.props.location.state;
+        if (grid == null) this.getInitialGrid();
         this.setState({ grid });
     }
 
@@ -173,11 +174,9 @@ class PathFindingVisualiser extends Component {
     }
 
     startAPIAnalysis(API_URL) {
-        const apiData = this.mapGridToAPIGrid();
-        const json = JSON.stringify({
-            nodes: apiData
-        })
-        console.log(json);
+        const apiGrid = this.mapGridToAPIGrid();
+        const jsonGrid = JSON.stringify(apiGrid);
+        console.log(jsonGrid);
 
 
         fetch(API_URL, {
@@ -185,7 +184,7 @@ class PathFindingVisualiser extends Component {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: json
+            body: jsonGrid
         })
             .then(result => result.json())
             .then(dijkstraReport => this.animateAnalysis(dijkstraReport))
@@ -193,22 +192,19 @@ class PathFindingVisualiser extends Component {
     }
 
     mapGridToAPIGrid() {
-        const apiData = [];
-        this.state.grid.map(row => {
-            const apiRow = [];
-            row.map(node => {
-                apiRow.push(
-                    {
-                        id: node.id,
-                        isStart: node.isStart,
-                        isFinish: node.isFinish,
-                        isWall: node.isWall
-                    }
-                )
+        const grid = {};
+        grid.nodes = this.state.grid.map(row => {
+            return row.map(node => {
+                return {
+                    id: node.id,
+                    isStart: node.isStart,
+                    isFinish: node.isFinish,
+                    isWall: node.isWall
+                };
             });
-            apiData.push(apiRow);
         });
-        return apiData;
+
+        return grid;
     }
 
     animateAnalysis(dijkstraReport) {
