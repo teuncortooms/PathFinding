@@ -8,21 +8,21 @@ namespace PathFindingDotnetCore.Services
 {
     public class GridRepository
     {
-        private static readonly List<Grid_v1> grids = new List<Grid_v1>();
+        private static readonly List<Grid> grids = new List<Grid>();
 
         static GridRepository()
         {
             for (int i = 0; i < 5; i++)
             {
-                Grid_v1 grid = GetRandomGrid(40, 40);
+                Grid grid = GetRandomGrid(20, 40);
                 grids.Add(grid);
             }
         }
 
-        private static Grid_v1 GetRandomGrid(int rows, int cols)
+        private static Grid GetRandomGrid(int rows, int cols)
         {
             Random rnd = new Random();
-            Grid_v1 grid = new Grid_v1(rows, cols);
+            Grid grid = new Grid(rows, cols);
 
             // set walls
             int nWalls = cols * rows / 4;
@@ -32,44 +32,42 @@ namespace PathFindingDotnetCore.Services
             }
 
             // set start
-            Node_v1 startNode = grid.Nodes2D[rnd.Next(rows), rnd.Next(cols)];
-            startNode.IsStart = true;
-            startNode.IsWall = false;
+            Cell start = grid.Cells[rnd.Next(rows), rnd.Next(cols)];
+            start.IsStart = true;
+            start.IsWall = false;
 
-            // set finish
-            Node_v1 finishNode;
-            do
-            {
-                finishNode = grid.Nodes2D[rnd.Next(rows), rnd.Next(cols)];
-            } while (finishNode.IsStart);
-            finishNode.IsFinish = true;
-            finishNode.IsWall = false;
+            // set destination
+            Cell dest;
+            do { dest = grid.Cells[rnd.Next(rows), rnd.Next(cols)]; }
+            while (dest.IsStart);
+            dest.IsDestination = true;
+            dest.IsWall = false;
 
             return grid;
         }
 
-        public List<Grid_v1> GetAll()
+        public List<Grid> GetAll()
         {
             return grids;
         }
 
-        public Grid_v1 GetById(Guid id)
+        public Grid GetById(Guid id)
         {
             return grids.Where(grid => grid.Id == id).FirstOrDefault();
         }
 
-        public Grid_v1 Create(Grid_v1 input)
+        public bool Add(Grid newGrid)
         {
-            Grid_v1 newGrid = new Grid_v1(input.Nodes2D);
             grids.Add(newGrid);
-            return newGrid;
+            return true;
         }
 
-        //public void Update(Guid id, Grid grid)
-        //{
-        //    Grid found = grids.Where(n => n.Id == id).FirstOrDefault();
-        //    found.Nodes2D = grid.Nodes2D;
-        //}
+        public bool Update(Guid id, Grid update)
+        {
+            Grid found = grids.Where(n => n.Id == id).FirstOrDefault();
+            found.Cells = update.Cells;
+            return true;
+        }
 
         public void Delete(Guid id)
         {

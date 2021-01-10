@@ -1,7 +1,7 @@
 ﻿import React, { Component } from "react";
-import "./Node.css";
+import "./Cell.css";
 
-export default class Node extends Component {
+export default class Cell extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -12,14 +12,14 @@ export default class Node extends Component {
             col,
             row,
             id,
-            isFinish,
+            isDestination,
             isStart,
             isWall,
             onMouseDown,
             onMouseEnter,
             onMouseUp
         } = this.props;
-        const extraClassName = isWall ? "node-wall" : isFinish ? "node-finish" : isStart ? "node-start" : "";
+        const extraClassName = isWall ? "node-wall" : isDestination ? "node-destination" : isStart ? "node-start" : "";
 
         return (
             <div

@@ -80,7 +80,7 @@ namespace PathFindingDotnetCore.Models
             // bidirectional edges, so above and left aren't needed
         }
 
-        public int GetSourceId()
+        public int GetStartId()
         {
             foreach (var node in NodeDetails)
             {
@@ -93,12 +93,12 @@ namespace PathFindingDotnetCore.Models
         {
             foreach (var node in NodeDetails)
             {
-                if (node.IsFinish) return node.Id;
+                if (node.IsDestination) return node.Id;
             }
             return -1;
         }
 
-        public int GetSourceIdx()
+        public int GetStartIdx()
         {
             for (int i = 0; i < NodeDetails.Length; i++)
             {
@@ -111,7 +111,7 @@ namespace PathFindingDotnetCore.Models
         {
             for (int i = 0; i < NodeDetails.Length; i++)
             {
-                if (NodeDetails[i].IsFinish) return i;
+                if (NodeDetails[i].IsDestination) return i;
             }
             return -1;
         }

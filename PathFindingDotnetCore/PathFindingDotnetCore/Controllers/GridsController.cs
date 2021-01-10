@@ -21,9 +21,16 @@ namespace PathFindingDotnetCore.Controllers
 
         // GET grids
         [HttpGet]
-        public IEnumerable<Grid_v1> Get()
+        public IEnumerable<GridVM> Get()
         {
-            return gridService.GetAll();
+            List<Grid> grids = gridService.GetAll();
+            List<GridVM> response = new List<GridVM>();
+            foreach (var grid in grids)
+            {
+                response.Add(new GridVM(grid));
+            }
+
+            return response;
         }
 
         // GET grids/5
@@ -35,20 +42,19 @@ namespace PathFindingDotnetCore.Controllers
 
         // POST grids
         [HttpPost]
-        public IActionResult Post([FromBody] Grid_v1 grid)
+        public IActionResult Post([FromBody] GridVM input)
         {
-            return CreatedAtAction("Get", new { id = grid.Id }, gridService.Create(grid));
+            Grid grid = input.ConvertToGrid();
+            return CreatedAtAction("GET", gridService.Add(grid));
         }
 
         // PUT grids/5
         [HttpPut("{id}")]
-#pragma warning disable IDE0060 // Remove unused parameter
-        public IActionResult Put(Guid id, [FromBody] Grid_v1 grid)
-#pragma warning restore IDE0060 // Remove unused parameter
+        public IActionResult Put(Guid id, [FromBody] GridVM input)
         {
-            throw new NotImplementedException();
-            //gridService.Update(id, grid);
-            //return NoContent();
+            Grid newGrid = input.ConvertToGrid();
+            gridService.Update(id, newGrid);
+            return NoContent();
         }
 
         // DELETE grids/5
@@ -59,9 +65,5 @@ namespace PathFindingDotnetCore.Controllers
             return NoContent();
         }
 
-        public override NoContentResult NoContent()
-        {
-            return base.NoContent();
-        }
     }
 }

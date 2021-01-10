@@ -1,8 +1,9 @@
 ﻿import React, { Component } from 'react';
 import { Table, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import RegistrationModal from './EditGridModal';
 import { GRIDS_API_URL } from '../../constants';
-class DataTable extends Component {
+class GridsTable extends Component {
     deleteGrid = id => {
         let confirmDeletion = window.confirm('Do you really wish to delete it?');
         if (confirmDeletion) {
@@ -13,7 +14,7 @@ class DataTable extends Component {
                 }
             })
                 .then(res => {
-                    this.props.deleteItemFromState(id);
+                    this.props.deleteGridFromState(id);
                 })
                 .catch(err => console.log(err));
         }
@@ -39,22 +40,32 @@ class DataTable extends Component {
                                 {grid.id}
                             </th>
                             <td>
-                                {grid.nodes.size}
+                                {grid.cells[0].length} * {grid.cells.length}
                             </td>
                             <td align="center">
                                 <div>
-                                    <RegistrationModal
-                                        isNew={false}
-                                        grid={grid}
-                                        updateGridIntoState={this.props.updateState} />
-                  &nbsp;&nbsp;&nbsp;
-                  <Button color="danger" onClick={() => this.deleteGrid(grid.id)}>Delete</Button>
+                                    {
+                                        //<RegistrationModal
+                                        //    isNew={false}
+                                        //    grid={grid}
+                                        //    updateGridIntoState={this.props.updateState} />
+                                    }
+                                    <Button color="warning" tag={Link} to={{
+                                        pathname: "/Visualiser",
+                                        state: { grid: grid.cells }
+                                    }}>Visualiser</Button>
+
+                                    &nbsp;&nbsp;&nbsp;
+
+                                    <Button color="danger" onClick={
+                                        () => this.deleteGrid(grid.id)
+                                    }>Delete</Button>
                                 </div>
                             </td>
                         </tr>
                     ))}
             </tbody>
-        </Table>;
+        </Table >;
     }
 }
-export default DataTable;
+export default GridsTable;

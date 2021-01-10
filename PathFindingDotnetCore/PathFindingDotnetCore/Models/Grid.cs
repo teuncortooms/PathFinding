@@ -8,7 +8,7 @@ namespace PathFindingDotnetCore.Models
     public class Grid
     {
         public Guid Id { get; }
-        public Cell[,] Cells { get; }
+        public Cell[,] Cells { get; set; }
 
         public Grid(Cell[,] cells)
         {
@@ -41,11 +41,11 @@ namespace PathFindingDotnetCore.Models
             Cells[row, col].IsStart = true;
         }
 
-        public void SetFinish(int row, int col)
+        public void SetDestination(int row, int col)
         {
-            Cell oldFinish = GetCell(cell => cell.IsFinish);
-            if (oldFinish != null) oldFinish.IsFinish = false;
-            Cells[row, col].IsFinish = true;
+            Cell oldDest = GetCell(cell => cell.IsDestination);
+            if (oldDest != null) oldDest.IsDestination = false;
+            Cells[row, col].IsDestination = true;
         }
 
         private delegate bool IsRequestedCell(Cell cell);

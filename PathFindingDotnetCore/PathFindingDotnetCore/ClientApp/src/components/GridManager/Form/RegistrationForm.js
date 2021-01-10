@@ -4,7 +4,7 @@ import { GRIDS_API_URL } from '../../constants';
 class RegistrationForm extends React.Component {
     state = {
         id: 0,
-        nodes: ''
+        cells: ''
     }
     componentDidMount() {
         if (this.props.grid) {
@@ -42,7 +42,7 @@ class RegistrationForm extends React.Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                nodes: this.state.nodes
+                nodes: this.state.cells
             })
         })
             .then(() => {
@@ -55,7 +55,7 @@ class RegistrationForm extends React.Component {
         return <Form onSubmit={this.props.grid ? this.submitEdit : this.submitNew}>
             <FormGroup>
                 <Label for="name">Nodes:</Label>
-                <Input type="text" name="nodes" onChange={this.onChange} value={this.state.nodes === '' ? '' : this.state.nodes} />
+                <Input type="text" name="nodes" onChange={this.onChange} value={this.state.cells === '' ? '' : this.state.cells} />
             </FormGroup>
             <Button>Send</Button>
         </Form>;

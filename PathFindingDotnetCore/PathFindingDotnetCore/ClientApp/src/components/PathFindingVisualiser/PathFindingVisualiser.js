@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
-import Node from "./Node/Node.js";
+import Cell from "./Cell/Cell.js";
 import * as urls from "../../constants";
-import { dijkstraAnalyse, getDijkstraReport } from "../../algorithms/dijkstra.js"
+import { dijkstraAnalyse, getDijkstraReport } from "../../algorithms/dijkstraGridAnalysis.js"
 import "./PathFindingVisualiser.css";
 
 
@@ -11,10 +11,10 @@ class PathFindingVisualiser extends Component {
 
     NUMBER_OF_ROWS = 20;
     NUMBER_OF_COLUMNS = 40;
-    START_NODE_ROW = 10;
-    START_NODE_COL = 5;
-    FINISH_NODE_ROW = 10;
-    FINISH_NODE_COL = 38;
+    START_ROW = 10;
+    START_COL = 5;
+    DESTINATION_ROW = 10;
+    DESTINATION_COL = 38;
 
 
     constructor(props) {
@@ -27,19 +27,40 @@ class PathFindingVisualiser extends Component {
     }
 
     componentDidMount() {
-        const grid = this.getInitialGrid();
+        const propsState = this.props.location.state;
+        const apiGrid = propsState ? propsState.grid : null;
+        const grid = apiGrid ? this.prepareGrid(apiGrid) : this.getInitialGrid();
+        //const grid = this.getInitialGrid();
         this.setState({ grid });
+    }
+
+    prepareGrid(apiGrid) {
+        return apiGrid.map(apiRow => {
+            return apiRow.map(apiCell => {
+                return {
+                    id: apiCell.id,
+                    col: apiCell.col,
+                    row: apiCell.row,
+                    isStart: apiCell.isStart,
+                    isDestination: apiCell.isDestination,
+                    isWall: apiCell.isWall,
+                    distance: Infinity,
+                    isVisited: false,
+                    parent: null
+                }
+            })
+        });
     }
 
     getInitialGrid() {
         const grid = [];
         const nRows = this.NUMBER_OF_ROWS;
         const nCols = this.NUMBER_OF_COLUMNS;
-        let id = 0;
-        for (let iRow = 0; iRow < nRows; iRow++) {
+        let id = 1;
+        for (let i = 0; i < nRows; i++) {
             const row = [];
-            for (let iCol = 0; iCol < nCols; iCol++) {
-                row.push(this.createNode(iCol, iRow, id));
+            for (let j = 0; j < nCols; j++) {
+                row.push(this.createCell(i, j, id));
                 id++;
             }
             grid.push(row);
@@ -47,13 +68,13 @@ class PathFindingVisualiser extends Component {
         return grid;
     }
 
-    createNode(iCol, iRow, id) {
+    createCell(row, col, id) {
         return {
             id: id,
-            col: iCol,
-            row: iRow,
-            isStart: iRow === this.START_NODE_ROW && iCol === this.START_NODE_COL,
-            isFinish: iRow === this.FINISH_NODE_ROW && iCol === this.FINISH_NODE_COL,
+            col: col,
+            row: row,
+            isStart: row === this.START_ROW && col === this.START_COL,
+            isDestination: row === this.DESTINATION_ROW && col === this.DESTINATION_COL,
             distance: Infinity,
             isVisited: false,
             previousNode: null,
@@ -78,12 +99,12 @@ class PathFindingVisualiser extends Component {
 
     getNewGridWithWallToggled = (grid, row, col) => {
         const newGrid = grid.slice();
-        const node = newGrid[row][col];
-        const newNode = {
-            ...node,
-            isWall: !node.isWall,
+        const cell = newGrid[row][col];
+        const newCell = {
+            ...cell,
+            isWall: !cell.isWall,
         };
-        newGrid[row][col] = newNode;
+        newGrid[row][col] = newCell;
         return newGrid;
     }
 
@@ -100,11 +121,8 @@ class PathFindingVisualiser extends Component {
                     <Button className="m-1" color="info" onClick={() => this.startJSDijkstra()}>
                         Dijkstra JS
                     </Button>
-                    <Button className="m-1" color="info" onClick={() => this.startAPIDijkstra_v1()}>
-                        Dijkstra API v1
-                    </Button>
-                    <Button className="m-1" color="info" onClick={() => this.startAPIDijkstra_v2()}>
-                        Dijkstra API v2
+                    <Button className="m-1" color="info" onClick={() => this.startAPIDijkstra()}>
+                        Dijkstra API
                     </Button>
                     <Button className="m-1" color="success" onClick={() => this.startAPIAStar()}>
                         A* API
@@ -125,29 +143,29 @@ class PathFindingVisualiser extends Component {
                     {grid.map((row, iRow) => {
                         return (
                             <div key={iRow}>
-                                {row.map((node, iNode) => {
+                                {row.map((cell) => {
                                     const {
                                         row,
                                         col,
                                         id,
-                                        isFinish,
+                                        isDestination,
                                         isStart,
                                         isWall
-                                    } = node;
+                                    } = cell;
                                     return (
-                                        <Node
-                                            key={iNode}
+                                        <Cell
+                                            key={id}
                                             id={id}
                                             col={col}
                                             row={row}
-                                            isFinish={isFinish}
+                                            isDestination={isDestination}
                                             isStart={isStart}
                                             isWall={isWall}
                                             mouseIsPressed={mouseIsPressed}
                                             onMouseDown={(row, col) => this.handleMouseDown(row, col)}
                                             onMouseEnter={(row, col) => this.handleMouseEnter(row, col)}
                                             onMouseUp={() => this.handleMouseUp()}
-                                        ></Node>
+                                        ></Cell>
                                     );
                                 })}
                             </div>
@@ -160,19 +178,13 @@ class PathFindingVisualiser extends Component {
 
     startJSDijkstra() {
         const { grid } = this.state;
-        const startNode = grid[this.START_NODE_ROW][this.START_NODE_COL];
-        const finishNode = grid[this.FINISH_NODE_ROW][this.FINISH_NODE_COL];
-        const visitedNodesInOrder = dijkstraAnalyse(grid, startNode, finishNode);
+        const visitedNodesInOrder = dijkstraAnalyse(grid);
         const dijkstraReport = getDijkstraReport(visitedNodesInOrder);
         this.animateAnalysis(dijkstraReport);
     }
 
-    startAPIDijkstra_v1() {
-        this.startAPIAnalysis(urls.DIJKSTRA_V1_API_URL);
-    }
-
-    startAPIDijkstra_v2() {
-        this.startAPIAnalysis(urls.DIJKSTRA_V2_API_URL);
+    startAPIDijkstra() {
+        this.startAPIAnalysis(urls.DIJKSTRA_API_URL);
     }
 
     startAPIAStar() {
@@ -180,17 +192,17 @@ class PathFindingVisualiser extends Component {
     }
 
     startAPIAnalysis(API_URL) {
-        const apiData = this.mapGridToAPIGrid();
-        console.log(JSON.stringify({ nodes: apiData }));
+        const apiGrid = this.mapGridToAPIGrid();
+        const jsonGrid = JSON.stringify(apiGrid);
+        console.log(jsonGrid);
+
 
         fetch(API_URL, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                nodes: apiData
-            })
+            body: jsonGrid
         })
             .then(result => result.json())
             .then(dijkstraReport => this.animateAnalysis(dijkstraReport))
@@ -198,22 +210,19 @@ class PathFindingVisualiser extends Component {
     }
 
     mapGridToAPIGrid() {
-        const apiData = [];
-        this.state.grid.map(row => {
-            const apiRow = [];
-            row.map(node => {
-                apiRow.push(
-                    {
-                        id: node.id,
-                        isStart: node.isStart,
-                        isFinish: node.isFinish,
-                        isWall: node.isWall
-                    }
-                )
+        const grid = {};
+        grid.cells = this.state.grid.map(row => {
+            return row.map(node => {
+                return {
+                    id: node.id,
+                    isStart: node.isStart,
+                    isDestination: node.isDestination,
+                    isWall: node.isWall
+                };
             });
-            apiData.push(apiRow);
         });
-        return apiData;
+
+        return grid;
     }
 
     animateAnalysis(dijkstraReport) {
@@ -226,8 +235,11 @@ class PathFindingVisualiser extends Component {
         for (let i = 1; i < visitedNodesInOrder.length - 1; i++) {
             setTimeout(() => {
                 const nodeId = visitedNodesInOrder[i];
-                document.getElementById(`node-${nodeId}`).className = // non-react hack
-                    "node node-visited";
+                if (nodeId > 0)
+                    document.getElementById(`node-${nodeId}`).className = // non-react hack
+                        "node node-visited";
+                if (nodeId < 0)
+                    document.getElementById(`node-${Math.abs(nodeId)}`).classList.remove("node-visited");
             }, 10 / this.state.speed * i);
         }
         setTimeout(() => {

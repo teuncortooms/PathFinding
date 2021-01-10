@@ -1,7 +1,7 @@
 ﻿import React, { Component } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { GRIDS_API_URL } from '../../constants';
-import DataTable from './GridsTable';
+import GridsTable from './GridsTable';
 import RegistrationModal from './EditGridModal';
 
 class Home extends Component {
@@ -38,17 +38,19 @@ class Home extends Component {
             </Row>
             <Row>
                 <Col>
-                    <DataTable
+                    <GridsTable
                         grids={this.state.grids}
                         updateState={this.updateState}
                         deleteGridFromState={this.deleteGridFromState} />
                 </Col>
             </Row>
-            <Row>
-                <Col>
-                    <RegistrationModal isNew={true} addGridToState={this.addGridToState} />
-                </Col>
-            </Row>
+            {
+            //<Row>
+            //    <Col>
+            //        <RegistrationModal isNew={true} addGridToState={this.addGridToState} />
+            //    </Col>
+            //</Row>
+            }
         </Container>;
     }
 }
