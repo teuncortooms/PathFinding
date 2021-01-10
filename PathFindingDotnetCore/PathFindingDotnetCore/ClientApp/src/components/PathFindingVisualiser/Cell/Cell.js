@@ -1,7 +1,7 @@
 ﻿import React, { Component } from "react";
-import "./Node.css";
+import "./Cell.css";
 
-export default class Node extends Component {
+export default class Cell extends Component {
     constructor(props) {
         super(props);
         this.state = {};

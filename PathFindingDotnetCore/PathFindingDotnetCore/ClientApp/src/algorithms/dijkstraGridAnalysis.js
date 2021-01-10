@@ -1,8 +1,9 @@
-﻿export function dijkstraAnalyse(grid, startNode, destinationNode) {
-    if (!startNode || !destinationNode || startNode === destinationNode) return false; 
+﻿export function dijkstraAnalyse(grid) {
+    const start = getStart(grid);
+    const destination = getDestination(grid);
 
     const visitedNodesInOrder = [];
-    startNode.distance = 0;
+    start.distance = 0;
     const unvisitedNodes = getAllNodes(grid);
     let foundHim = false;
     while (unvisitedNodes.length !== 0 && !foundHim) {
@@ -11,10 +12,40 @@
         if (closestNode.isWall) continue;
         closestNode.isVisited = true;
         visitedNodesInOrder.push(closestNode);
-        if (closestNode === destinationNode) foundHim = true;
+        if (closestNode === destination) foundHim = true;
         else updateUnvisitedNeighbours(closestNode, grid);
     }
     return visitedNodesInOrder;
+}
+
+function getStart(grid)
+{
+    const nRows = grid.length;
+    const nCols = grid[0].length;
+    for (let row = 0; row < nRows; row++)
+    {
+        for (let col = 0; col < nCols; col++)
+        {
+            let cell = grid[row][col];
+            if (cell.isStart) return cell;
+        }
+    }
+    return null;
+}
+
+function getDestination(grid)
+{
+    const nRows = grid.length;
+    const nCols = grid[0].length;
+    for (let row = 0; row < nRows; row++)
+    {
+        for (let col = 0; col < nCols; col++)
+        {
+            let cell = grid[row][col];
+            if (cell.isDestination) return cell;
+        }
+    }
+    return null;
 }
 
 function getAllNodes(grid) {

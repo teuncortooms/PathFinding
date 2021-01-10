@@ -8,24 +8,24 @@ namespace PathFindingDotnetCore.Models
     public class GridVM
     {
         public Guid Id { get; set; }
-        public List<List<NodeVM>> Cells { get; set; } // List for Swagger
+        public List<List<CellVM>> Cells { get; set; } // List for Swagger
 
         public GridVM() { }
 
         public GridVM(Grid grid)
         {
             Id = grid.Id;
-            Cells = new List<List<NodeVM>>();
+            Cells = new List<List<CellVM>>();
             int nRows = grid.Cells.GetLength(0);
             int nCols = grid.Cells.GetLength(1);
 
             for (int row = 0; row < nRows; row++)
             {
-                Cells.Add(new List<NodeVM>());
+                Cells.Add(new List<CellVM>());
                 for (int col = 0; col < nCols; col++)
                 {
                     Cell gridCell = grid.Cells[row, col];
-                    Cells[row].Add(new NodeVM(gridCell));
+                    Cells[row].Add(new CellVM(gridCell));
                 }
             }
         }

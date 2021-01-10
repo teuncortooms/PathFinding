@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
-import Node from "./Node/Node.js";
+import Cell from "./Cell/Cell.js";
 import * as urls from "../../constants";
-import { dijkstraAnalyse, getDijkstraReport } from "../../algorithms/dijkstra.js"
+import { dijkstraAnalyse, getDijkstraReport } from "../../algorithms/dijkstraGridAnalysis.js"
 import "./PathFindingVisualiser.css";
 
 
@@ -27,9 +27,29 @@ class PathFindingVisualiser extends Component {
     }
 
     componentDidMount() {
-        //let { grid } = this.props.location.state ? this.props.location.state : this.getInitialGrid();
-        const { grid } = this.props.location.state ? this.props.location.state : { grid: this.getInitialGrid() };
+        const propsState = this.props.location.state;
+        const apiGrid = propsState ? propsState.grid : null;
+        const grid = apiGrid ? this.prepareGrid(apiGrid) : this.getInitialGrid();
+        //const grid = this.getInitialGrid();
         this.setState({ grid });
+    }
+
+    prepareGrid(apiGrid) {
+        return apiGrid.map(apiRow => {
+            return apiRow.map(apiCell => {
+                return {
+                    id: apiCell.id,
+                    col: apiCell.col,
+                    row: apiCell.row,
+                    isStart: apiCell.isStart,
+                    isDestination: apiCell.isDestination,
+                    isWall: apiCell.isWall,
+                    distance: Infinity,
+                    isVisited: false,
+                    parent: null
+                }
+            })
+        });
     }
 
     getInitialGrid() {
@@ -37,10 +57,10 @@ class PathFindingVisualiser extends Component {
         const nRows = this.NUMBER_OF_ROWS;
         const nCols = this.NUMBER_OF_COLUMNS;
         let id = 1;
-        for (let iRow = 0; iRow < nRows; iRow++) {
+        for (let i = 0; i < nRows; i++) {
             const row = [];
-            for (let iCol = 0; iCol < nCols; iCol++) {
-                row.push(this.createNode(iCol, iRow, id));
+            for (let j = 0; j < nCols; j++) {
+                row.push(this.createCell(i, j, id));
                 id++;
             }
             grid.push(row);
@@ -48,13 +68,13 @@ class PathFindingVisualiser extends Component {
         return grid;
     }
 
-    createNode(iCol, iRow, id) {
+    createCell(row, col, id) {
         return {
             id: id,
-            col: iCol,
-            row: iRow,
-            isStart: iRow === this.START_ROW && iCol === this.START_COL,
-            isDestination: iRow === this.DESTINATION_ROW && iCol === this.DESTINATION_COL,
+            col: col,
+            row: row,
+            isStart: row === this.START_ROW && col === this.START_COL,
+            isDestination: row === this.DESTINATION_ROW && col === this.DESTINATION_COL,
             distance: Infinity,
             isVisited: false,
             previousNode: null,
@@ -79,12 +99,12 @@ class PathFindingVisualiser extends Component {
 
     getNewGridWithWallToggled = (grid, row, col) => {
         const newGrid = grid.slice();
-        const node = newGrid[row][col];
-        const newNode = {
-            ...node,
-            isWall: !node.isWall,
+        const cell = newGrid[row][col];
+        const newCell = {
+            ...cell,
+            isWall: !cell.isWall,
         };
-        newGrid[row][col] = newNode;
+        newGrid[row][col] = newCell;
         return newGrid;
     }
 
@@ -123,7 +143,7 @@ class PathFindingVisualiser extends Component {
                     {grid.map((row, iRow) => {
                         return (
                             <div key={iRow}>
-                                {row.map((node, iNode) => {
+                                {row.map((cell) => {
                                     const {
                                         row,
                                         col,
@@ -131,10 +151,10 @@ class PathFindingVisualiser extends Component {
                                         isDestination,
                                         isStart,
                                         isWall
-                                    } = node;
+                                    } = cell;
                                     return (
-                                        <Node
-                                            key={iNode}
+                                        <Cell
+                                            key={id}
                                             id={id}
                                             col={col}
                                             row={row}
@@ -145,7 +165,7 @@ class PathFindingVisualiser extends Component {
                                             onMouseDown={(row, col) => this.handleMouseDown(row, col)}
                                             onMouseEnter={(row, col) => this.handleMouseEnter(row, col)}
                                             onMouseUp={() => this.handleMouseUp()}
-                                        ></Node>
+                                        ></Cell>
                                     );
                                 })}
                             </div>
@@ -158,9 +178,7 @@ class PathFindingVisualiser extends Component {
 
     startJSDijkstra() {
         const { grid } = this.state;
-        const startNode = grid[this.START_ROW][this.START_COL];
-        const destNode = grid[this.DESTINATION_ROW][this.DESTINATION_COL];
-        const visitedNodesInOrder = dijkstraAnalyse(grid, startNode, destNode);
+        const visitedNodesInOrder = dijkstraAnalyse(grid);
         const dijkstraReport = getDijkstraReport(visitedNodesInOrder);
         this.animateAnalysis(dijkstraReport);
     }
