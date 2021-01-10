@@ -112,12 +112,16 @@ class PathFindingVisualiser extends Component {
         this.setState({ speed: e.target.value })
     }
 
+    submitHandler(e) {
+        e.preventDefault();
+    }
+
     render() {
         const { grid, mouseIsPressed } = this.state;
 
         return (
             <div>
-                <Form inline>
+                <Form inline onSubmit={this.submitHandler}>
                     <Button className="m-1" color="info" onClick={() => this.startJSDijkstra()}>
                         Dijkstra JS
                     </Button>
