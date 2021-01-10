@@ -10,8 +10,8 @@ namespace PathFindingDotnetCore.Models
         public int Row { get; }
         public int Col { get; }
 
-        public Cell(int row, int col, int id = -1, bool isStart = false, bool isFinish = false, bool isWall = false)
-            : base(id, isStart, isFinish, isWall)
+        public Cell(int row, int col, int id = -1, bool isStart = false, bool isDestination = false, bool isWall = false)
+            : base(id, isStart, isDestination, isWall)
         {
             Col = col;
             Row = row;

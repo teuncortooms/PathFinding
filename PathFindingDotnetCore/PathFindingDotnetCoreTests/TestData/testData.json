@@ -4,241 +4,241 @@
       {
         "id": 0,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 1,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 2,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 3,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 4,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 5,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 6,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 7,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 8,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 9,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 10,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 11,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 12,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 13,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 14,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 15,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 16,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 17,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 18,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 19,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 20,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 21,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 22,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 23,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 24,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 25,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 26,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 27,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 28,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 29,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 30,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 31,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 32,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 33,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 34,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 35,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 36,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 37,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 38,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 39,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -246,241 +246,241 @@
       {
         "id": 40,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 41,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 42,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 43,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 44,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 45,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 46,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 47,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 48,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 49,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 50,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 51,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 52,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 53,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 54,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 55,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 56,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 57,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 58,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 59,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 60,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 61,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 62,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 63,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 64,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 65,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 66,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 67,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 68,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 69,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 70,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 71,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 72,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 73,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 74,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 75,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 76,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 77,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 78,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 79,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -488,241 +488,241 @@
       {
         "id": 80,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 81,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 82,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 83,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 84,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 85,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 86,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 87,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 88,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 89,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 90,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 91,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 92,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 93,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 94,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 95,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 96,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 97,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 98,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 99,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 100,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 101,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 102,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 103,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 104,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 105,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 106,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 107,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 108,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 109,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 110,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 111,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 112,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 113,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 114,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 115,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 116,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 117,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 118,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 119,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -730,241 +730,241 @@
       {
         "id": 120,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 121,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 122,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 123,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 124,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 125,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 126,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 127,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 128,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 129,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 130,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 131,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 132,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 133,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 134,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 135,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 136,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 137,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 138,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 139,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 140,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 141,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 142,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 143,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 144,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 145,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 146,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 147,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 148,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 149,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 150,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 151,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 152,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 153,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 154,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 155,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 156,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 157,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 158,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 159,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -972,241 +972,241 @@
       {
         "id": 160,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 161,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 162,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 163,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 164,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 165,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 166,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 167,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 168,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 169,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 170,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 171,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 172,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 173,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 174,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 175,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 176,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 177,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 178,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 179,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 180,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 181,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 182,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 183,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 184,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 185,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 186,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 187,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 188,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 189,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 190,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 191,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 192,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 193,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 194,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 195,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 196,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 197,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 198,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 199,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -1214,241 +1214,241 @@
       {
         "id": 200,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 201,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 202,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 203,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 204,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 205,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 206,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 207,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 208,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 209,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 210,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 211,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 212,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 213,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 214,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 215,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 216,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 217,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 218,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 219,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 220,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 221,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 222,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 223,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 224,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 225,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 226,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 227,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 228,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 229,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 230,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 231,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 232,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 233,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 234,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 235,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 236,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 237,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 238,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 239,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -1456,241 +1456,241 @@
       {
         "id": 240,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 241,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 242,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 243,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 244,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 245,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 246,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 247,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 248,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 249,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 250,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 251,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 252,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 253,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 254,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 255,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 256,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 257,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 258,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 259,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 260,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 261,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 262,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 263,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 264,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 265,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 266,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 267,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 268,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 269,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 270,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 271,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 272,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 273,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 274,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 275,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 276,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 277,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 278,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 279,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -1698,241 +1698,241 @@
       {
         "id": 280,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 281,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 282,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 283,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 284,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 285,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 286,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 287,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 288,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 289,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 290,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 291,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 292,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 293,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 294,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 295,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 296,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 297,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 298,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 299,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 300,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 301,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 302,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 303,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 304,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 305,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 306,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 307,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 308,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 309,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 310,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 311,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 312,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 313,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 314,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 315,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 316,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 317,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 318,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 319,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -1940,241 +1940,241 @@
       {
         "id": 320,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 321,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 322,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 323,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 324,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 325,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 326,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 327,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 328,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 329,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 330,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 331,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 332,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 333,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 334,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 335,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 336,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 337,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 338,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 339,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 340,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 341,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 342,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 343,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 344,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 345,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 346,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 347,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 348,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 349,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 350,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 351,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 352,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 353,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 354,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 355,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 356,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 357,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 358,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 359,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -2182,241 +2182,241 @@
       {
         "id": 360,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 361,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 362,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 363,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 364,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 365,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 366,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 367,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 368,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 369,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 370,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 371,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 372,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 373,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 374,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 375,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 376,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 377,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 378,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 379,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 380,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 381,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 382,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 383,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 384,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 385,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 386,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 387,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 388,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 389,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 390,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 391,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 392,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 393,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 394,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 395,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 396,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 397,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 398,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 399,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -2424,241 +2424,241 @@
       {
         "id": 400,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 401,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 402,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 403,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 404,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 405,
         "isStart": true,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 406,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 407,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 408,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 409,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 410,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 411,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 412,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 413,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 414,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 415,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 416,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 417,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 418,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 419,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 420,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 421,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 422,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 423,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 424,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 425,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 426,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 427,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 428,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 429,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 430,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 431,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 432,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 433,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 434,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 435,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 436,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 437,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 438,
         "isStart": false,
-        "isFinish": true,
+        "isDestination": true,
         "isWall": false
       },
       {
         "id": 439,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -2666,241 +2666,241 @@
       {
         "id": 440,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 441,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 442,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 443,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 444,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 445,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 446,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 447,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 448,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 449,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 450,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 451,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 452,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 453,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 454,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 455,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 456,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 457,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 458,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 459,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 460,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 461,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 462,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 463,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 464,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 465,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 466,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 467,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 468,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 469,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 470,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 471,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 472,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 473,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 474,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 475,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 476,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 477,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 478,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 479,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -2908,241 +2908,241 @@
       {
         "id": 480,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 481,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 482,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 483,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 484,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 485,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 486,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 487,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 488,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 489,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 490,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 491,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 492,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 493,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 494,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 495,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 496,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 497,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 498,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 499,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 500,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 501,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 502,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 503,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 504,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 505,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 506,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 507,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 508,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 509,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 510,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 511,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 512,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 513,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 514,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 515,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 516,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 517,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 518,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 519,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -3150,241 +3150,241 @@
       {
         "id": 520,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 521,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 522,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 523,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 524,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 525,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 526,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 527,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 528,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 529,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 530,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 531,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 532,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 533,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 534,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 535,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 536,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 537,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 538,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 539,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 540,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 541,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 542,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 543,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 544,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 545,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 546,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 547,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 548,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 549,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 550,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 551,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 552,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 553,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 554,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 555,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 556,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 557,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 558,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 559,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -3392,241 +3392,241 @@
       {
         "id": 560,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 561,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 562,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 563,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 564,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 565,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 566,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 567,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 568,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 569,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 570,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 571,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 572,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 573,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 574,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 575,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 576,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 577,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 578,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 579,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 580,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 581,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 582,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 583,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 584,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 585,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 586,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 587,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 588,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 589,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 590,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 591,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 592,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 593,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 594,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 595,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 596,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 597,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 598,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 599,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -3634,241 +3634,241 @@
       {
         "id": 600,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 601,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 602,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 603,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 604,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 605,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 606,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 607,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 608,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 609,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 610,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 611,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 612,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 613,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 614,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 615,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 616,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 617,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 618,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 619,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 620,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 621,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 622,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 623,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 624,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 625,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 626,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 627,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 628,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 629,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 630,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 631,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 632,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 633,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 634,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 635,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 636,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 637,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 638,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 639,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -3876,241 +3876,241 @@
       {
         "id": 640,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 641,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 642,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 643,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 644,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 645,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 646,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 647,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 648,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 649,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 650,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 651,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 652,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 653,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 654,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 655,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 656,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 657,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 658,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 659,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 660,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 661,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 662,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 663,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 664,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 665,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 666,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 667,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 668,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 669,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 670,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 671,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 672,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 673,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 674,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 675,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 676,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 677,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 678,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 679,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -4118,241 +4118,241 @@
       {
         "id": 680,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 681,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 682,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 683,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 684,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 685,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 686,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 687,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 688,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 689,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 690,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 691,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 692,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 693,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 694,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 695,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 696,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 697,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 698,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 699,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 700,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 701,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 702,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 703,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 704,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 705,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 706,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 707,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 708,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 709,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 710,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 711,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 712,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 713,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 714,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 715,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 716,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 717,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 718,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 719,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -4360,241 +4360,241 @@
       {
         "id": 720,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 721,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 722,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 723,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 724,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 725,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 726,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 727,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 728,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 729,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 730,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 731,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 732,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 733,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 734,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 735,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 736,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 737,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 738,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 739,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 740,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 741,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 742,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 743,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 744,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 745,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 746,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 747,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 748,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 749,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 750,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 751,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 752,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 753,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 754,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 755,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 756,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 757,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 758,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 759,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ],
@@ -4602,241 +4602,241 @@
       {
         "id": 760,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 761,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 762,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 763,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 764,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 765,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 766,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 767,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 768,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 769,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 770,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 771,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 772,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 773,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 774,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 775,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 776,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 777,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 778,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 779,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 780,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 781,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 782,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 783,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 784,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 785,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 786,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 787,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 788,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 789,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 790,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 791,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 792,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 793,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 794,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 795,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 796,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 797,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 798,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       },
       {
         "id": 799,
         "isStart": false,
-        "isFinish": false,
+        "isDestination": false,
         "isWall": false
       }
     ]

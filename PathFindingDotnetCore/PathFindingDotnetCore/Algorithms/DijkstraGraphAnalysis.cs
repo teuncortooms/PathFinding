@@ -8,7 +8,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
     public class DijkstraGraphAnalysis
     {
         private readonly Graph graph;
-        private readonly int[] distanceToSrc;
+        private readonly int[] distanceToStart;
         private readonly bool[] isVisited;
         private readonly int[] parents;
 
@@ -18,32 +18,32 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
         {
             this.graph = graph;
             int n = graph.NodeDetails.Length;
-            distanceToSrc = new int[n];
+            distanceToStart = new int[n];
             isVisited = new bool[n];
             parents = new int[n];
             for (int i = 0; i < n; i++)
             {
-                distanceToSrc[i] = int.MaxValue;
+                distanceToStart[i] = int.MaxValue;
                 isVisited[i] = false;
                 parents[i] = -1;
             }
 
             Report = new Report();
 
-            int iSrc = graph.GetStartIdx();
+            int iStart = graph.GetStartIdx();
             int iDest = graph.GetDestinationIdx();
-            StartAnalysis(iSrc, iDest);
+            StartAnalysis(iStart, iDest);
         }
 
-        private void StartAnalysis(int iSrc, int iDest)
+        private void StartAnalysis(int iStart, int iDest)
         {
-            distanceToSrc[iSrc] = 0;
+            distanceToStart[iStart] = 0;
 
             int nNodes = graph.NodeDetails.Length;
             for (int i = 0; i < nNodes - 1; i++)
             {
-                int Idx = GetClosestIdx(); // equals src in first iteration. 
-                if (distanceToSrc[Idx] == int.MaxValue) break; // no more paths from src
+                int Idx = GetClosestIdx(); // equals start in first iteration. 
+                if (distanceToStart[Idx] == int.MaxValue) break; // no more paths from start
                 isVisited[Idx] = true;
                 Report.VisitedInOrder.Add(graph.NodeDetails[Idx].Id);
                 if (graph.NodeDetails[Idx].IsDestination) break; // finished
@@ -63,7 +63,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
             {
                 if (!isVisited[iNode] && IsShorterDistance(iNode, minDistance))
                 {
-                    minDistance = distanceToSrc[iNode];
+                    minDistance = distanceToStart[iNode];
                     closestNodeIdx = iNode;
                 }
             }
@@ -72,7 +72,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 
         private bool IsShorterDistance(int iNode, int minDistance)
         {
-            return distanceToSrc[iNode] <= minDistance;
+            return distanceToStart[iNode] <= minDistance;
         }
 
         private void UpdateNeighbours(int currentNodeIdx)
@@ -84,7 +84,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
                 if (!isVisited[newNodeIdx] && IsConnected(currentNodeIdx,newNodeIdx) && IsShorterPath(currentNodeIdx, newNodeIdx))
                 {
                     int connectionWeight = graph.EdgeMatrix[currentNodeIdx, newNodeIdx];
-                    distanceToSrc[newNodeIdx] = distanceToSrc[currentNodeIdx] + connectionWeight;
+                    distanceToStart[newNodeIdx] = distanceToStart[currentNodeIdx] + connectionWeight;
                     parents[newNodeIdx] = currentNodeIdx;
                 }
             }
@@ -93,7 +93,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
         private bool IsShorterPath(int currentNodeIdx, int newNodeIdx)
         {
             int connectionWeight = graph.EdgeMatrix[currentNodeIdx, newNodeIdx];
-            return distanceToSrc[currentNodeIdx] + connectionWeight < distanceToSrc[newNodeIdx];
+            return distanceToStart[currentNodeIdx] + connectionWeight < distanceToStart[newNodeIdx];
         }
 
         private bool IsConnected(int currentNodeIdx, int newNodeIdx)

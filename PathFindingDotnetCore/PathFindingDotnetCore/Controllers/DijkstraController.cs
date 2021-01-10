@@ -18,7 +18,7 @@ namespace PathFindingDotnetCore.Controllers
         {
             Grid grid = new Grid(5, 5);
             grid.SetStart(2, 1);
-            grid.SetFinish(3, 4);
+            grid.SetDestination(3, 4);
 
             Graph graph = new Graph(grid);
 

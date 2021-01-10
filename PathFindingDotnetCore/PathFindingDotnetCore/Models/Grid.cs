@@ -41,10 +41,10 @@ namespace PathFindingDotnetCore.Models
             Cells[row, col].IsStart = true;
         }
 
-        public void SetFinish(int row, int col)
+        public void SetDestination(int row, int col)
         {
-            Cell oldFinish = GetCell(cell => cell.IsDestination);
-            if (oldFinish != null) oldFinish.IsDestination = false;
+            Cell oldDest = GetCell(cell => cell.IsDestination);
+            if (oldDest != null) oldDest.IsDestination = false;
             Cells[row, col].IsDestination = true;
         }
 

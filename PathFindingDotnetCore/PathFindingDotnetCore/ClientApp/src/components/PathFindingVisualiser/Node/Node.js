@@ -12,14 +12,14 @@ export default class Node extends Component {
             col,
             row,
             id,
-            isFinish,
+            isDestination,
             isStart,
             isWall,
             onMouseDown,
             onMouseEnter,
             onMouseUp
         } = this.props;
-        const extraClassName = isWall ? "node-wall" : isFinish ? "node-finish" : isStart ? "node-start" : "";
+        const extraClassName = isWall ? "node-wall" : isDestination ? "node-destination" : isStart ? "node-start" : "";
 
         return (
             <div

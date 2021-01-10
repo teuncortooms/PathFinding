@@ -1,5 +1,5 @@
-﻿export function dijkstraAnalyse(grid, startNode, finishNode) {
-    if (!startNode || !finishNode || startNode === finishNode) return false; 
+﻿export function dijkstraAnalyse(grid, startNode, destinationNode) {
+    if (!startNode || !destinationNode || startNode === destinationNode) return false; 
 
     const visitedNodesInOrder = [];
     startNode.distance = 0;
@@ -11,7 +11,7 @@
         if (closestNode.isWall) continue;
         closestNode.isVisited = true;
         visitedNodesInOrder.push(closestNode);
-        if (closestNode === finishNode) foundHim = true;
+        if (closestNode === destinationNode) foundHim = true;
         else updateUnvisitedNeighbours(closestNode, grid);
     }
     return visitedNodesInOrder;
@@ -67,7 +67,7 @@ function getPath(visitedNodesInOrder) {
     const path = [];
     const last = visitedNodesInOrder.length - 1;
     let node = visitedNodesInOrder[last];
-    if (!node.isFinish) return false;
+    if (!node.isDestination) return false;
 
     while (!node.isStart) {
         path.push(node.id);

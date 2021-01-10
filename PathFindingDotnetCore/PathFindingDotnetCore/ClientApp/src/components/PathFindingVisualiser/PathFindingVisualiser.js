@@ -11,10 +11,10 @@ class PathFindingVisualiser extends Component {
 
     NUMBER_OF_ROWS = 20;
     NUMBER_OF_COLUMNS = 40;
-    START_NODE_ROW = 10;
-    START_NODE_COL = 5;
-    FINISH_NODE_ROW = 10;
-    FINISH_NODE_COL = 38;
+    START_ROW = 10;
+    START_COL = 5;
+    DESTINATION_ROW = 10;
+    DESTINATION_COL = 38;
 
 
     constructor(props) {
@@ -27,8 +27,8 @@ class PathFindingVisualiser extends Component {
     }
 
     componentDidMount() {
-        let { grid } = this.props.location.state;
-        if (grid == null) this.getInitialGrid();
+        //let { grid } = this.props.location.state ? this.props.location.state : this.getInitialGrid();
+        const { grid } = this.props.location.state ? this.props.location.state : { grid: this.getInitialGrid() };
         this.setState({ grid });
     }
 
@@ -53,8 +53,8 @@ class PathFindingVisualiser extends Component {
             id: id,
             col: iCol,
             row: iRow,
-            isStart: iRow === this.START_NODE_ROW && iCol === this.START_NODE_COL,
-            isFinish: iRow === this.FINISH_NODE_ROW && iCol === this.FINISH_NODE_COL,
+            isStart: iRow === this.START_ROW && iCol === this.START_COL,
+            isDestination: iRow === this.DESTINATION_ROW && iCol === this.DESTINATION_COL,
             distance: Infinity,
             isVisited: false,
             previousNode: null,
@@ -128,7 +128,7 @@ class PathFindingVisualiser extends Component {
                                         row,
                                         col,
                                         id,
-                                        isFinish,
+                                        isDestination,
                                         isStart,
                                         isWall
                                     } = node;
@@ -138,7 +138,7 @@ class PathFindingVisualiser extends Component {
                                             id={id}
                                             col={col}
                                             row={row}
-                                            isFinish={isFinish}
+                                            isDestination={isDestination}
                                             isStart={isStart}
                                             isWall={isWall}
                                             mouseIsPressed={mouseIsPressed}
@@ -158,9 +158,9 @@ class PathFindingVisualiser extends Component {
 
     startJSDijkstra() {
         const { grid } = this.state;
-        const startNode = grid[this.START_NODE_ROW][this.START_NODE_COL];
-        const finishNode = grid[this.FINISH_NODE_ROW][this.FINISH_NODE_COL];
-        const visitedNodesInOrder = dijkstraAnalyse(grid, startNode, finishNode);
+        const startNode = grid[this.START_ROW][this.START_COL];
+        const destNode = grid[this.DESTINATION_ROW][this.DESTINATION_COL];
+        const visitedNodesInOrder = dijkstraAnalyse(grid, startNode, destNode);
         const dijkstraReport = getDijkstraReport(visitedNodesInOrder);
         this.animateAnalysis(dijkstraReport);
     }
@@ -193,12 +193,12 @@ class PathFindingVisualiser extends Component {
 
     mapGridToAPIGrid() {
         const grid = {};
-        grid.nodes = this.state.grid.map(row => {
+        grid.cells = this.state.grid.map(row => {
             return row.map(node => {
                 return {
                     id: node.id,
                     isStart: node.isStart,
-                    isFinish: node.isFinish,
+                    isDestination: node.isDestination,
                     isWall: node.isWall
                 };
             });

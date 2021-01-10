@@ -36,12 +36,12 @@ namespace PathFindingDotnetCore.Services
             start.IsStart = true;
             start.IsWall = false;
 
-            // set finish
-            Cell finish;
-            do { finish = grid.Cells[rnd.Next(rows), rnd.Next(cols)]; }
-            while (finish.IsStart);
-            finish.IsDestination = true;
-            finish.IsWall = false;
+            // set destination
+            Cell dest;
+            do { dest = grid.Cells[rnd.Next(rows), rnd.Next(cols)]; }
+            while (dest.IsStart);
+            dest.IsDestination = true;
+            dest.IsWall = false;
 
             return grid;
         }

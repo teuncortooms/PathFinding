@@ -41,9 +41,9 @@ namespace PathFindingDotnetCore.Models
                 {
                     int id = Cells[row][col].Id;
                     bool isStart = Cells[row][col].IsStart;
-                    bool isFinish = Cells[row][col].IsDestination;
+                    bool isDestination = Cells[row][col].IsDestination;
                     bool isWall = Cells[row][col].IsWall;
-                    cells[row, col] = new Cell(row, col, id, isStart, isFinish, isWall);
+                    cells[row, col] = new Cell(row, col, id, isStart, isDestination, isWall);
                 }
             }
             return new Grid(cells);

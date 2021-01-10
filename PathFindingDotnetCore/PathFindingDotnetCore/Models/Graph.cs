@@ -80,7 +80,7 @@ namespace PathFindingDotnetCore.Models
             // bidirectional edges, so above and left aren't needed
         }
 
-        public int GetSourceId()
+        public int GetStartId()
         {
             foreach (var node in NodeDetails)
             {

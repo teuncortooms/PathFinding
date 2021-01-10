@@ -13,11 +13,11 @@ namespace PathFindingDotnetCore.Models
         public bool IsDestination { get; set; }
         public bool IsStart { get; set; }
 
-        public Node(int id = -1, bool isStart = false, bool isFinish = false, bool isWall = false)
+        public Node(int id = -1, bool isStart = false, bool isDestination = false, bool isWall = false)
         {
             Id = id == -1 ? new Random().Next() : id;
             IsStart = isStart;
-            IsDestination = isFinish;
+            IsDestination = isDestination;
             IsWall = isWall;
         }
     }
