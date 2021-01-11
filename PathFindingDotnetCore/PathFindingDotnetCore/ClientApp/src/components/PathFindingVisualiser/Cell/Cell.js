@@ -1,4 +1,5 @@
 ﻿import React, { Component } from "react";
+import { Col } from 'reactstrap';
 import "./Cell.css";
 
 export default class Cell extends Component {
@@ -9,6 +10,8 @@ export default class Cell extends Component {
 
     render() {
         const {
+            height,
+            width,
             col,
             row,
             id,
@@ -22,7 +25,7 @@ export default class Cell extends Component {
         const extraClassName = isWall ? "node-wall" : isDestination ? "node-destination" : isStart ? "node-start" : "";
 
         return (
-            <div
+            <div style={{ width: width, height: height }}
                 id={`node-${id}`}
                 className={`node ${extraClassName}`}
                 onMouseDown={() => onMouseDown(row, col)}
