@@ -1,0 +1,340 @@
+{
+  "cells": [
+    [
+      {
+        "id": 1,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 2,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 3,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 4,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 5,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 6,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 7,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 8,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 9,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      }
+    ],
+    [
+      {
+        "id": 10,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 11,
+        "isStart": true,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 12,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 13,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 14,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 15,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 16,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 17,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 18,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      }
+    ],
+    [
+      {
+        "id": 19,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 20,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 21,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 22,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 23,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 24,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 25,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 26,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 27,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      }
+    ],
+    [
+      {
+        "id": 28,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 29,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 30,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 31,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 32,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 33,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 34,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 35,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 36,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      }
+    ],
+    [
+      {
+        "id": 37,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 38,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 39,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 40,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 41,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 42,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 43,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 44,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 45,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      }
+    ],
+    [
+      {
+        "id": 46,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 47,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 48,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 49,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 50,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 51,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": true
+      },
+      {
+        "id": 52,
+        "isStart": false,
+        "isDestination": true,
+        "isWall": false
+      },
+      {
+        "id": 53,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      },
+      {
+        "id": 54,
+        "isStart": false,
+        "isDestination": false,
+        "isWall": false
+      }
+    ]
+  ]
+}

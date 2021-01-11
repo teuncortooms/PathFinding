@@ -85,23 +85,26 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 
         private AStarCell GetNextBest()
         {
-            AStarCell winner = cells[0, 0];
+            AStarCell winner = null;
 
             for (int row = 0; row < nRows; row++)
             {
                 for (int col = 0; col < nCols; col++)
                 {
                     var cell = cells[row, col];
-                    if (!cell.IsClosed && cell.F < winner.F)
+                    if (!cell.IsClosed)
                     {
-                        winner = cell;
-                    }
-                    if (!cell.IsClosed && cell.F == winner.F)
-                    {
-                        //Prefer to explore options with longer known paths (closer to goal)
-                        if (cell.G > winner.G)
+                        if (winner == null || cell.F < winner.F)
                         {
                             winner = cell;
+                        }
+                        if (cell.F == winner.F)
+                        {
+                            //Prefer to explore options with longer known paths (closer to goal)
+                            if (cell.G > winner.G)
+                            {
+                                winner = cell;
+                            }
                         }
                     }
                 }
@@ -145,7 +148,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 
             // add if left non-wall neighbour
             if (col > 0) AddNonWallNeighbour(neighbours, cells[row, col - 1]);
-            
+
             // add if below non-wall neighbour
             if (row < nRows - 1) AddNonWallNeighbour(neighbours, cells[row + 1, col]);
 
@@ -162,7 +165,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
 
         private int GetManhattan(AStarCell cell, AStarCell dest)
         {
-            
+
             return Math.Abs(dest.Col - cell.Col) + Math.Abs(dest.Row - cell.Row);
         }
 
