@@ -100,7 +100,7 @@ namespace PathFindingDotnetCore.Algorithms.Dijkstra
                         }
                         if (cell.F == winner.F)
                         {
-                            //Prefer to explore options with longer known paths (closer to goal)
+                            // Prefer to explore options with longer known paths (closer to goal)
                             if (cell.G > winner.G)
                             {
                                 winner = cell;
